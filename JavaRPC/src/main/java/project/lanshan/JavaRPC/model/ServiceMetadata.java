@@ -2,12 +2,13 @@ package project.lanshan.JavaRPC.model;
 
 public class ServiceMetadata {
 	
+	private String interfaceName = "";
 	private String serviceName = "";
 	private Class<?> serviceClass = null;
 	private Object[] parameters;
 	private String serializableWay = "Java";
 	
-	
+	public ServiceMetadata(){}
 	
 	
 	public String getServiceName() {
@@ -33,6 +34,12 @@ public class ServiceMetadata {
 	}
 	public void setSerializableWay(String serializableWay) {
 		this.serializableWay = serializableWay;
+	}
+	public String getInterfaceName() {
+		return interfaceName;
+	}
+	public void setInterfaceName(String interfaceName) {
+		this.interfaceName = interfaceName;
 	}
 	
 }
