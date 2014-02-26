@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.springframework.beans.factory.InitializingBean;
 
-import project.lanshan.JavaRPC.model.ServiceMetadata;
+import project.lanshan.JavaRPC.Provider.Publisher.ProviderPublisher;
 
 public class SpringProviderBean implements InitializingBean{
 	
@@ -14,7 +14,7 @@ public class SpringProviderBean implements InitializingBean{
 	
 	private String callWay;
 	private ProviderPublisher publisher;
-	private static ServiceMetadata metadata;  
+	
 	private static AtomicBoolean isProvided = new AtomicBoolean(false);
 	private final AtomicBoolean inited = new AtomicBoolean(false);
 	
@@ -23,7 +23,6 @@ public class SpringProviderBean implements InitializingBean{
 		if(!inited.compareAndSet(false,true))
 			return;
 		
-		initLog4j();
 		
 		if(!isProvided.compareAndSet(false,true))
 			return;
@@ -35,10 +34,6 @@ public class SpringProviderBean implements InitializingBean{
 
 	
 	
-	public void initLog4j(){
-		PropertyConfigurator.configure("log4j.properties");
-	}
-	
 	public String getCallWay() {
 		return callWay;
 	}
@@ -47,14 +42,7 @@ public class SpringProviderBean implements InitializingBean{
 		this.callWay = callWay;
 	}
 
-	public static ServiceMetadata getMetadata() {
-		return metadata;
-	}
-
-	public static void setMetadata(ServiceMetadata metadata) {
-		SpringProviderBean.metadata = metadata;
-	}
-
+	
 	public ProviderPublisher getPublisher() {
 		return publisher;
 	}
@@ -62,6 +50,5 @@ public class SpringProviderBean implements InitializingBean{
 	public void setPublisher(ProviderPublisher publisher) {
 		this.publisher = publisher;
 	}
-
 
 }
