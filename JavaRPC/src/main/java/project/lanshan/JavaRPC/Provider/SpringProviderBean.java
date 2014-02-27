@@ -9,7 +9,7 @@ import project.lanshan.JavaRPC.Provider.Publisher.ProviderPublisher;
 
 public class SpringProviderBean implements InitializingBean{
 	
-	private static Logger log = Logger.getLogger("SpringProviderBean.class");
+	private static Logger log = Logger.getLogger(SpringProviderBean.class.getName());
 	
 	private ProviderPublisher publisher;
 	

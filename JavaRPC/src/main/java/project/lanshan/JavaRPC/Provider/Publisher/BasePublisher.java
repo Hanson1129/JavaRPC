@@ -8,7 +8,7 @@ public abstract class BasePublisher implements ProviderPublisher{
 	
 	@Override
 	public Boolean publish() {
-		if(metadata.getCallWay().equals("serialization"))
+		if(metadata.getCallWay().equals("object"))
 			return publishInSerialization();
 		else if(metadata.getCallWay().equals("result"))
 			return publishInReflection();

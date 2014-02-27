@@ -23,5 +23,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/TryNetty/netty-all-5.0.0.Alpha1.jar" sourcepath="/TryNetty/netty-all-5.0.0.Alpha1-sources.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
