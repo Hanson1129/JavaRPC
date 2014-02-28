@@ -29,7 +29,7 @@ public class SpringProviderBean implements InitializingBean{
 	}
 	
 	private void Config() {
-		
+		//向publisher里注入metadata
 	}
 
 
