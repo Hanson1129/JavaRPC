@@ -10,15 +10,17 @@ public class Request implements Serializable{
 	private static final long serialVersionUID = 5308860507944813424L;
 	private String className;
 	private String serviceName;
-	private Object[] parameters;
+	private Class<?>[] parametersClass;
+	private Object[] parametersObject;
 	private String callWay;
 	
 	Request(){}
 	
-	Request(String className,String serviceName,Object[] parameters,String callWay){
+	Request(String className,String serviceName,Class<?>[] parametersClass,Object[] parametersObject,String callWay){
 		this.className = className;
 		this.serviceName = serviceName;
-		this.parameters = parameters;
+		this.parametersClass = parametersClass;
+		this.parametersObject = parametersObject;
 		this.callWay = callWay;
 	}
 	
@@ -35,19 +37,28 @@ public class Request implements Serializable{
 	public void setServiceName(String serviceName) {
 		this.serviceName = serviceName;
 	}
-	public Object[] getParameters() {
-		return parameters;
-	}
-	public void setParameters(Object[] parameters) {
-		this.parameters = parameters;
-	}
-
 	public String getCallWay() {
 		return callWay;
 	}
 
 	public void setCallWay(String callWay) {
 		this.callWay = callWay;
+	}
+
+	public Class<?>[] getParametersClass() {
+		return parametersClass;
+	}
+
+	public void setParametersClass(Class<?>[] parametersClass) {
+		this.parametersClass = parametersClass;
+	}
+
+	public Object[] getParametersObject() {
+		return parametersObject;
+	}
+
+	public void setParametersObject(Object[] parametersObject) {
+		this.parametersObject = parametersObject;
 	}
 	
 }

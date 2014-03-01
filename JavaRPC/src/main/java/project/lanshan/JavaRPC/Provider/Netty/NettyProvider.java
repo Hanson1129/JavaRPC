@@ -1,5 +1,8 @@
 package project.lanshan.JavaRPC.Provider.Netty;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 import org.apache.log4j.Logger;
 
 import io.netty.bootstrap.ServerBootstrap;
@@ -83,20 +86,98 @@ public class NettyProvider {
 				ctx.close();
 				return;
 			}
+			
 			Request request = (Request)msg;
+			Response response;
+			
+			if(request.getServiceName() != metadata.getServiceName() ||
+			   request.getClassName() != metadata.getServiceClass()){
+				log.error("Server didn't provide request service.");
+				ctx.close();
+				return;
+			}
+				
 			if(request.getCallWay().equals("result")){
-				handleResult(request);
+				if((response = handleResult(request)) != null){
+					ctx.write(response);
+				}else{
+					ctx.close();
+				}
+				
 			}else if(request.getCallWay().equals("object")){
-				handlerObject(request);
+				if((response = handleObject(request)) != null){
+					ctx.write(response);
+				}else{
+					ctx.close();
+				}
+			}
+		}
+		@Override
+		public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+			ctx.flush();
+		}
+
+		@Override
+		public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
+			log.error(cause.getMessage());
+			ctx.close();
+		}
+		
+		
+		
+		public Response handleResult(Request request){
+			String interfaceClassName= request.getClassName();
+			String methodName = request.getServiceName();
+			Class<?>[] paramatersClass = request.getParametersClass();
+			Object[] paramatersObjects = request.getParametersObject();
+			try{
+				Class<?> interfaceClazz = Class.forName(interfaceClassName);
+				if(paramatersClass.length > 0){
+					Method method = interfaceClazz.getMethod(methodName, paramatersClass);
+					return new Response(method.invoke(interfaceClazz.newInstance(),paramatersObjects));
+				}else{
+					Method method = interfaceClazz.getMethod(methodName);
+					return new Response(method.invoke(interfaceClazz.newInstance()));
+				}
+			}catch(ClassNotFoundException e){
+				log.error("class not found on server");
+				return null;
+			} catch (SecurityException e) {
+				log.error("getDeclaredMethod error");
+				return null;
+			} catch (NoSuchMethodException e) {
+				log.error("not found method in interfaceClazz");
+				return null;
+			} catch (IllegalArgumentException e) {
+				log.error("IllegalArgumentException");
+				return null;
+			} catch (IllegalAccessException e) {
+				log.error("IllegalAccessException");
+				return null;
+			} catch (InvocationTargetException e) {
+				log.error("InvocationTargetException");
+				return null;
+			} catch (InstantiationException e) {
+				log.error("InstantiationException");
+				return null;
 			}
 		}
 		
-		public Response handleResult(Request request){
-			return null;
-		}
-		
-		public Response handlerObject(Request request){
-			return null;
+		public Response handleObject(Request request){
+			String interfaceClassName= request.getClassName();
+			try{
+				Class<?> interfaceClazz = Class.forName(interfaceClassName);
+				return new Response(interfaceClazz.newInstance());
+			}catch(ClassNotFoundException e){
+				log.error("class not found on server");
+				return null;
+			} catch (InstantiationException e) {
+				log.error("InstantiationException");
+				return null;
+			} catch (IllegalAccessException e) {
+				log.error("IllegalAccessException");
+				return null;
+			}
 		}
 	}
 }
