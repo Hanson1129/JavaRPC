@@ -7,9 +7,9 @@ public class ServiceMetadata {
 	private String serializableWay;
 	
 	public ServiceMetadata(){
-		this.setServiceClass("");
+		this.serviceClass = "";
 		this.serviceName = "";
-		this.serializableWay = "java";
+		this.serializableWay = "Netty";
 	}
 	
 	

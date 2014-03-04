@@ -23,8 +23,11 @@ public class SpringProviderBean implements InitializingBean{
 		if(!isProvided.compareAndSet(false,true))
 			return;
 		Config();
-		if(!publisher.publish()){
+		if(publisher.publish()){
 			log.info("Your service has been provided!");
+		}else{
+			log.error("Fail to provide your service!");
+			System.exit(1);
 		}
 	}
 	
@@ -33,12 +36,6 @@ public class SpringProviderBean implements InitializingBean{
 	}
 
 
-	public ProviderPublisher getPublisher() {
-		return publisher;
-	}
-
-	public void setPublisher(ProviderPublisher publisher) {
-		this.publisher = publisher;
-	}
+	
 
 }
