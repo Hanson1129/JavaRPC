@@ -26,9 +26,10 @@ public class NettyConsumer {
 	private Object object;
 	private final RPCInetAddress providerAddress;
 
-	public NettyConsumer(){
+	public NettyConsumer(Request request){
 		metadata = new ServiceMetadata();
 		providerAddress = new RPCInetAddress();
+		this.request = request;
 	}
 
 	

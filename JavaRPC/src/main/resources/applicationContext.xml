@@ -6,4 +6,17 @@
             http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd  
             http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    
+    <bean id="Service" class="project.lanshan.JavaRPC.Consumer.Netty.NettyConsumer">
+   		<property name="serviceName" value=""/>
+   		<property name="serviceClass" value=""/>
+   		<property name="host" value=""/>
+   		<property name="port" value=""/>
+    </bean>
+    <bean id="caller" class="project.lanshan.JavaRPC.Consumer.Caller.DefaultCaller">
+   		<property name="consumer" ref="Service"/>
+    </bean>
+    <bean id="SpringConsumerBean" class="project.lanshan.JavaRPC.Consumer.SpringConsumerBean">
+   		<property name="consumerCaller"  ref="caller"/>
+    </bean>
 </beans>

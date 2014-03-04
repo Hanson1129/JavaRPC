@@ -3,42 +3,40 @@ package project.lanshan.JavaRPC.Consumer;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.InitializingBean;
 
-import project.lanshan.JavaRPC.Consumer.Proxy.RPCProxy;
+import project.lanshan.JavaRPC.Consumer.Caller.ConsumerCaller;
 
 
-public class SpringConsumerBean implements InitializingBean{
+public class SpringConsumerBean {
 	
 	private static Logger log = Logger.getLogger(SpringConsumerBean.class.getName());
-	private static RPCProxy proxy;
+	private ConsumerCaller consumerCaller;
 	private final AtomicBoolean inited = new AtomicBoolean(false);
 	
-	
-	
-	
-	public void Config(){}
-
-
-
-
-	@Override
-	public void afterPropertiesSet() throws Exception {
+	public SpringConsumerBean(){
 		if(!inited.compareAndSet(false, true)){
 			log.error("Consumer has been inited!");
 			return;
 		}
 		Config();
-		if(proxy.getCaller().call()){
-			log.info("Call service successful!");
-		}else{
-			log.error("Fail to call the remote service");
-		}
 	}
-	
-	public Object getObject(){
-		return proxy.getCaller().getObject();
+
+
+
+	public void Config(){
 	}
+
+
+
+	public ConsumerCaller getConsumerCaller() {
+		return consumerCaller;
+	}
+
+	public void setConsumerCaller(ConsumerCaller consumerCaller) {
+		this.consumerCaller = consumerCaller;
+	}
+
+
 
 
 }
