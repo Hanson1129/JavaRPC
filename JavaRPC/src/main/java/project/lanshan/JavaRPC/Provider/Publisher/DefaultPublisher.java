@@ -1,16 +1,10 @@
 package project.lanshan.JavaRPC.Provider.Publisher;
 
-import project.lanshan.JavaRPC.Provider.Netty.NettyProvider;
-import project.lanshan.JavaRPC.model.RPCInetAddress;
-import project.lanshan.JavaRPC.model.ServiceMetadata;
+import project.lanshan.JavaRPC.Provider.Netty.Provider;
 
 public class DefaultPublisher implements ProviderPublisher{
 	
-	private NettyProvider provider;
-	
-	public DefaultPublisher(ServiceMetadata metadata,RPCInetAddress providerAddress){
-		provider = new NettyProvider(metadata,providerAddress);
-	}
+	private Provider provider;
 	
 	@Override
 	public Boolean publish() {
@@ -18,11 +12,11 @@ public class DefaultPublisher implements ProviderPublisher{
 	}
 	
 
-	public NettyProvider getProvider() {
+	public Provider getProvider() {
 		return provider;
 	}
 
-	public void setProvider(NettyProvider provider) {
+	public void setProvider(Provider provider) {
 		this.provider = provider;
 	} 
 

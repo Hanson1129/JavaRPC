@@ -1,10 +1,12 @@
 package project.lanshan.JavaRPC.Consumer.Caller;
 
-import project.lanshan.JavaRPC.Consumer.Netty.NettyConsumer;
+import project.lanshan.JavaRPC.Consumer.Netty.Consumer;
 
 public class DefaultCaller implements ConsumerCaller{
 
-	private NettyConsumer consumer;
+	private Consumer consumer;
+	
+	
 	@Override
 	public boolean call() {
 		return false;
@@ -15,11 +17,11 @@ public class DefaultCaller implements ConsumerCaller{
 		return consumer.getObject();
 	}
 
-	public NettyConsumer getConsumer() {
+	public Consumer getConsumer() {
 		return consumer;
 	}
 
-	public void setConsumer(NettyConsumer consumer) {
+	public void setConsumer(Consumer consumer) {
 		this.consumer = consumer;
 	}
 

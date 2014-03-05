@@ -23,7 +23,7 @@ import project.lanshan.JavaRPC.model.Request;
 import project.lanshan.JavaRPC.model.Response;
 import project.lanshan.JavaRPC.model.ServiceMetadata;
 
-public class NettyProvider {
+public class NettyProvider implements Provider{
 	
 	private static Logger log = Logger.getLogger(NettyProvider.class.getName());
 	
@@ -36,6 +36,7 @@ public class NettyProvider {
 		this.providerAddress = providerAddress;
 	}
 
+	@Override
 	public boolean startPublish(){
 		EventLoopGroup bossGroup = new NioEventLoopGroup();
 		EventLoopGroup workerGroup = new NioEventLoopGroup();

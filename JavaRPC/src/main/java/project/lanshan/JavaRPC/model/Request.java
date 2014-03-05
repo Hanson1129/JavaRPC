@@ -14,7 +14,14 @@ public class Request implements Serializable{
 	private Object[] parametersObject;
 	private String callWay;
 	
-	Request(){}
+	
+	public Request(){
+		this.className = "";
+		this.serviceName = "";
+		this.parametersClass = null;
+		this.parametersObject = null;
+		this.callWay = "result";
+	}
 	
 	Request(String className,String serviceName,Class<?>[] parametersClass,Object[] parametersObject,String callWay){
 		this.className = className;

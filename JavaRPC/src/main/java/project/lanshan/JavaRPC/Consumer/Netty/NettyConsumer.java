@@ -18,18 +18,20 @@ import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 
-public class NettyConsumer {
+public class NettyConsumer implements Consumer{
 	private static Logger log = Logger.getLogger(NettyProvider.class.getName());
 
 	private Request request;
 	private ServiceMetadata metadata;
 	private Object object;
-	private final RPCInetAddress providerAddress;
+	private RPCInetAddress providerAddress;
 
-	public NettyConsumer(Request request){
-		metadata = new ServiceMetadata();
-		providerAddress = new RPCInetAddress();
-		this.request = request;
+	public NettyConsumer(String serviceName,String serviceClass,String host,int port){
+		metadata.setServiceName(serviceName);
+		metadata.setServiceClass(serviceClass);
+		providerAddress.setHost(host);
+		providerAddress.setPort(port);
+		request = new Request();
 	}
 
 	
@@ -132,4 +134,6 @@ public class NettyConsumer {
 	public void setRequest(Request request) {
 		this.request = request;
 	}
+
+
 }
