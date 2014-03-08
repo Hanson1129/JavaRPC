@@ -1,6 +1,7 @@
 package project.lanshan.JavaRPC.Consumer.Caller;
 
 import project.lanshan.JavaRPC.Consumer.Netty.Consumer;
+import project.lanshan.JavaRPC.model.Request;
 
 public class DefaultCaller implements ConsumerCaller{
 
@@ -13,7 +14,7 @@ public class DefaultCaller implements ConsumerCaller{
 	}
 
 	@Override
-	public Object getObject() {
+	public Object getObject(){
 		return consumer.getObject();
 	}
 
@@ -23,6 +24,16 @@ public class DefaultCaller implements ConsumerCaller{
 
 	public void setConsumer(Consumer consumer) {
 		this.consumer = consumer;
+	}
+
+	@Override
+	public void setRequest(Request request) {
+		consumer.setRequest(request);
+	}
+
+	@Override
+	public String getClassName() {
+		return consumer.getClassName();
 	}
 
 }

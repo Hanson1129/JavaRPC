@@ -13,10 +13,18 @@
    		<property name="host" value=""/>
    		<property name="port" value=""/>
     </bean>
+    
+    <!-- Consumer -->
     <bean id="caller" class="project.lanshan.JavaRPC.Consumer.Caller.DefaultCaller">
    		<property name="consumer" ref="Service"/>
     </bean>
-    <bean id="SpringConsumerBean" class="project.lanshan.JavaRPC.Consumer.SpringConsumerBean">
+    <bean id="springConsumerBean" class="project.lanshan.JavaRPC.Consumer.SpringConsumerBean">
    		<property name="consumerCaller"  ref="caller"/>
+    </bean>
+    
+    <!-- MethodInterceptor -->
+    <bean id="methodInterceptor" class="project.lanshan.JavaRPC.Consumer.Interceptor.ActualMethod"/>
+    <bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+   		<property name="interceptorNames" ref="methodInterceptor"/>  
     </bean>
 </beans>

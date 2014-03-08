@@ -29,11 +29,13 @@ public class NettyProvider implements Provider{
 	
 	private ServiceMetadata metadata;
 	
-	private final RPCInetAddress providerAddress;
+	private RPCInetAddress providerAddress;
 	
-	public NettyProvider(ServiceMetadata metadata,RPCInetAddress providerAddress){
-		this.metadata = metadata;
-		this.providerAddress = providerAddress;
+	public NettyProvider(String serviceName,String serviceClass,String host,int port){
+		metadata.setServiceName(serviceName);
+		metadata.setServiceClass(serviceClass);
+		providerAddress.setHost(host);
+		providerAddress.setPort(port);
 	}
 
 	@Override
@@ -68,14 +70,6 @@ public class NettyProvider implements Provider{
 			bossGroup.shutdownGracefully();
 			workerGroup.shutdownGracefully();
 		}
-	}
-
-	public ServiceMetadata getMetadata() {
-		return metadata;
-	}
-
-	public void setMetadata(ServiceMetadata metadata) {
-		this.metadata = metadata;
 	}
 
 
@@ -180,5 +174,30 @@ public class NettyProvider implements Provider{
 				return null;
 			}
 		}
+	}
+	public String getHost() {
+		return providerAddress.getHost();
+	}
+	public void setHost(String host) {
+		providerAddress.setHost(host);
+	}
+	public int getPort() {
+		return providerAddress.getPort();
+	}
+	public void setPort(int port) {
+		providerAddress.setPort(port);
+	}
+	public String getServiceName() {
+		return metadata.getServiceName();
+	}
+	public void setServiceName(String serviceName) {
+		metadata.setServiceName(serviceName);
+	}
+
+	public String getServiceClass() {
+		return metadata.getServiceClass();
+	}
+	public void setServiceClass(String serviceClass) {
+		metadata.setServiceClass(serviceClass);
 	}
 }
