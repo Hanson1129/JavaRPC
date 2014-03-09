@@ -11,7 +11,7 @@ public class SpringProviderBean implements InitializingBean{
 	
 	private static Logger log = Logger.getLogger(SpringProviderBean.class.getName());
 	
-	private ProviderPublisher publisher;
+	private ProviderPublisher providerPublisher;
 	
 	private static AtomicBoolean isProvided = new AtomicBoolean(false);
 	private final AtomicBoolean inited = new AtomicBoolean(false);
@@ -23,16 +23,20 @@ public class SpringProviderBean implements InitializingBean{
 		if(!isProvided.compareAndSet(false,true))
 			return;
 		Config();
-		if(publisher.publish()){
-			log.info("Your service has been provided!");
-		}else{
-			log.error("Fail to provide your service!");
-			System.exit(1);
-		}
 	}
 	
 	private void Config() {
-		//向publisher里注入metadata和inetaddress
+	}
+	
+	public void publish(){
+		providerPublisher.publish();
+	}
+	public ProviderPublisher getProviderPublisher() {
+		return providerPublisher;
+	}
+
+	public void setProviderPublisher(ProviderPublisher providerPublisher) {
+		this.providerPublisher = providerPublisher;
 	}
 
 

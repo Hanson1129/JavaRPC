@@ -3,7 +3,6 @@ package project.lanshan.JavaRPC.Consumer.Netty;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.InitializingBean;
 
 import project.lanshan.JavaRPC.Provider.Netty.NettyProvider;
 import project.lanshan.JavaRPC.model.RPCInetAddress;
@@ -22,7 +21,7 @@ import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 
-public class NettyConsumer implements Consumer,InitializingBean{
+public class NettyConsumer implements Consumer{
 	private static Logger log = Logger.getLogger(NettyProvider.class.getName());
 
 	private Request request;
@@ -32,18 +31,13 @@ public class NettyConsumer implements Consumer,InitializingBean{
 	private AtomicBoolean hasObject;
 
 
-	@Override
-	public void afterPropertiesSet() throws Exception {
-		hasObject.lazySet(false);
+	
+	public NettyConsumer(){
+		metadata = new ServiceMetadata();
+		providerAddress = new RPCInetAddress();
+		hasObject = new AtomicBoolean(false);
 	}
-
-	public NettyConsumer(String serviceName,String serviceClass,String host,int port){
-		metadata.setServiceName(serviceName);
-		metadata.setServiceClass(serviceClass);
-		providerAddress.setHost(host);
-		providerAddress.setPort(port);
-	}
-
+	
 	
 	public void startCall() throws InterruptedException {
 	
@@ -77,7 +71,7 @@ public class NettyConsumer implements Consumer,InitializingBean{
 
 		@Override
 		public void channelActive(ChannelHandlerContext ctx) {
-			ctx.write(request);
+			ctx.writeAndFlush(request);
 		}
 
 		@Override
@@ -87,11 +81,6 @@ public class NettyConsumer implements Consumer,InitializingBean{
 			ctx.close();
 		}
 
-		@Override
-		public void channelReadComplete(ChannelHandlerContext ctx)
-				throws Exception {
-			ctx.close();
-		}
 
 		@Override
 		public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
@@ -135,11 +124,10 @@ public class NettyConsumer implements Consumer,InitializingBean{
 	}
 
 	private boolean checkOutRequest() {
-		if(request.getParametersObject() == null || request.getParametersClass() == null)
-			return false;
-		if(request.getClassName() == null)
+		
+		if(request.getClassName().length() == 0 )
 			request.setClassName(metadata.getServiceClass());
-		if(request.getServiceName() == null)
+		if(request.getServiceName().length() == 0)
 			request.setServiceName(metadata.getServiceName());
 		return true;
 	}
@@ -166,10 +154,7 @@ public class NettyConsumer implements Consumer,InitializingBean{
 		this.request = request;
 	}
 
-	@Override
-	public String getClassName() {
-		return getServiceClass();
-	}
+	
 
 
 }

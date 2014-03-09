@@ -31,12 +31,12 @@ public class NettyProvider implements Provider{
 	
 	private RPCInetAddress providerAddress;
 	
-	public NettyProvider(String serviceName,String serviceClass,String host,int port){
-		metadata.setServiceName(serviceName);
-		metadata.setServiceClass(serviceClass);
-		providerAddress.setHost(host);
-		providerAddress.setPort(port);
+	public NettyProvider(){
+		metadata = new ServiceMetadata();
+		providerAddress = new RPCInetAddress();
 	}
+	
+	
 
 	@Override
 	public boolean startPublish(){
@@ -61,6 +61,7 @@ public class NettyProvider implements Provider{
 				
 			try {
 				bootstrap.bind(providerAddress.getPort()).sync().channel().closeFuture().sync();
+				log.info("bind successful.");
 				return true;
 			} catch (InterruptedException e) {
 				log.error("bind() at "+providerAddress.getPort()+" fail!");
@@ -85,8 +86,8 @@ public class NettyProvider implements Provider{
 			Request request = (Request)msg;
 			Response response;
 			
-			if(request.getServiceName() != metadata.getServiceName() ||
-			   request.getClassName() != metadata.getServiceClass()){
+			if(!request.getServiceName().equals(metadata.getServiceName()) ||
+			   !request.getClassName().equals(metadata.getServiceClass()) ){
 				log.error("Server didn't provide request service.");
 				ctx.close();
 				return;

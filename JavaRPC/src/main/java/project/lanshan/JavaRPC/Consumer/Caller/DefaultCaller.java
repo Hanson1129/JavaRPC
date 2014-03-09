@@ -7,6 +7,7 @@ public class DefaultCaller implements ConsumerCaller{
 
 	private Consumer consumer;
 	
+	public DefaultCaller(){}
 	
 	@Override
 	public boolean call() {
@@ -31,9 +32,5 @@ public class DefaultCaller implements ConsumerCaller{
 		consumer.setRequest(request);
 	}
 
-	@Override
-	public String getClassName() {
-		return consumer.getClassName();
-	}
 
 }

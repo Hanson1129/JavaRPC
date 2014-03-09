@@ -7,24 +7,48 @@
             http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
     
-    <bean id="Service" class="project.lanshan.JavaRPC.Consumer.Netty.NettyConsumer">
-   		<property name="serviceName" value=""/>
-   		<property name="serviceClass" value=""/>
-   		<property name="host" value=""/>
-   		<property name="port" value=""/>
+    <bean id="CService" class="project.lanshan.JavaRPC.Consumer.Netty.NettyConsumer">
+   		<property name="serviceName" value="getWords"/>
+   		<property name="serviceClass" value="project.lanshan.JavaRPC.firsttest.ProviderAction"/>
+   		<property name="host" value="127.0.0.1"/>
+   		<property name="port" value="3789"/>
     </bean>
     
-    <!-- Consumer -->
-    <bean id="caller" class="project.lanshan.JavaRPC.Consumer.Caller.DefaultCaller">
-   		<property name="consumer" ref="Service"/>
-    </bean>
-    <bean id="springConsumerBean" class="project.lanshan.JavaRPC.Consumer.SpringConsumerBean">
-   		<property name="consumerCaller"  ref="caller"/>
-    </bean>
-    
+   
     <!-- MethodInterceptor -->
+    <bean id="targetService" class="project.lanshan.JavaRPC.firsttest.ConsumerAction"/>
     <bean id="methodInterceptor" class="project.lanshan.JavaRPC.Consumer.Interceptor.ActualMethod"/>
     <bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
-   		<property name="interceptorNames" ref="methodInterceptor"/>  
+   		<property name="target" ref="targetService"/>
+   		<property name="proxyInterfaces">  
+            <value>project.lanshan.JavaRPC.firsttest.Action</value>  
+        </property>  
+   		<property name="interceptorNames">
+   			<list>
+   				<value>methodInterceptor</value>
+   			</list>
+   		</property> 
+    </bean>
+    
+     <!-- Consumer -->
+    <bean id="consumerCaller" class="project.lanshan.JavaRPC.Consumer.Caller.DefaultCaller">
+   		<property name="consumer" ref="CService"/>
+    </bean>
+    <bean id="springConsumerBean" class="project.lanshan.JavaRPC.Consumer.SpringConsumerBean">
+   		<property name="consumerCaller"  ref="consumerCaller"/>
+    </bean>
+    
+    <!-- Provider -->
+    <bean id="PService" class="project.lanshan.JavaRPC.Provider.Netty.NettyProvider">
+   		 <property name="serviceName" value="getWords"/>
+   		<property name="serviceClass" value="project.lanshan.JavaRPC.firsttest.ProviderAction"/>
+   		<property name="host" value="127.0.0.1"/>
+   		<property name="port" value="3789"/>
+    </bean>
+    <bean id="providerPublisher" class="project.lanshan.JavaRPC.Provider.Publisher.DefaultPublisher">
+   		<property name="provider" ref="PService"/>
+    </bean>
+    <bean id="springProviderBean" class="project.lanshan.JavaRPC.Provider.SpringProviderBean">
+    	<property name="providerPublisher" ref="providerPublisher"/>
     </bean>
 </beans>

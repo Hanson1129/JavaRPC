@@ -6,5 +6,4 @@ public interface ConsumerCaller {
 	public boolean call();
 	public Object getObject();
 	public void setRequest(Request request);
-	public String getClassName();
 }

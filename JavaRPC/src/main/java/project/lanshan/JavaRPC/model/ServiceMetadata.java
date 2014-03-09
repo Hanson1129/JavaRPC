@@ -36,8 +36,4 @@ public class ServiceMetadata {
 	public void setServiceClass(String serviceClass) {
 		this.serviceClass = serviceClass;
 	}
-	
-
-
-	
 }
