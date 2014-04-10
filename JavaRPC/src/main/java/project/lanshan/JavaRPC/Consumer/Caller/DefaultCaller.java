@@ -1,7 +1,9 @@
-package project.lanshan.JavaRPC.Consumer.Caller;
+package project.lanshan.javarpc.consumer.caller;
 
-import project.lanshan.JavaRPC.Consumer.Netty.Consumer;
-import project.lanshan.JavaRPC.model.Request;
+import project.lanshan.javarpc.consumer.netty.Consumer;
+import project.lanshan.javarpc.model.Request;
+
+
 
 public class DefaultCaller implements ConsumerCaller{
 

@@ -1,4 +1,4 @@
-package project.lanshan.JavaRPC.model;
+package project.lanshan.javarpc.model;
 
 import java.io.Serializable;
 

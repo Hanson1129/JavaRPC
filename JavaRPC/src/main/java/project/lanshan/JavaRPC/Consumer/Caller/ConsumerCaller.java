@@ -1,6 +1,7 @@
-package project.lanshan.JavaRPC.Consumer.Caller;
+package project.lanshan.javarpc.consumer.caller;
 
-import project.lanshan.JavaRPC.model.Request;
+import project.lanshan.javarpc.model.Request;
+
 
 public interface ConsumerCaller {
 	public boolean call();

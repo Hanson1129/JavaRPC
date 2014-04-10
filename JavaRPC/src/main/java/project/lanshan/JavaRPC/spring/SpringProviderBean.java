@@ -1,11 +1,13 @@
-package project.lanshan.JavaRPC.Provider;
+package project.lanshan.javarpc.spring;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.InitializingBean;
 
-import project.lanshan.JavaRPC.Provider.Publisher.ProviderPublisher;
+import project.lanshan.javarpc.provider.publisher.ProviderPublisher;
+
+
 
 public class SpringProviderBean implements InitializingBean{
 	

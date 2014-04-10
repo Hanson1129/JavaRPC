@@ -1,6 +1,7 @@
-package project.lanshan.JavaRPC.Consumer.Netty;
+package project.lanshan.javarpc.consumer.netty;
 
-import project.lanshan.JavaRPC.model.Request;
+import project.lanshan.javarpc.model.Request;
+
 
 public interface Consumer {
 	public void startCall() throws InterruptedException ;

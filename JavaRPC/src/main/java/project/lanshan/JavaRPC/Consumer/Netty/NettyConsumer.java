@@ -1,14 +1,13 @@
-package project.lanshan.JavaRPC.Consumer.Netty;
+package project.lanshan.javarpc.consumer.netty;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.apache.log4j.Logger;
 
-import project.lanshan.JavaRPC.Provider.Netty.NettyProvider;
-import project.lanshan.JavaRPC.model.RPCInetAddress;
-import project.lanshan.JavaRPC.model.Request;
-import project.lanshan.JavaRPC.model.Response;
-import project.lanshan.JavaRPC.model.ServiceMetadata;
+import project.lanshan.javarpc.model.RPCInetAddress;
+import project.lanshan.javarpc.model.Request;
+import project.lanshan.javarpc.model.Response;
+import project.lanshan.javarpc.model.ServiceMetadata;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
@@ -22,7 +21,8 @@ import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 
 public class NettyConsumer implements Consumer{
-	private static Logger log = Logger.getLogger(NettyProvider.class.getName());
+	private static Logger log = Logger.getLogger(NettyConsumer.class.getName());
+	
 
 	private Request request;
 	private ServiceMetadata metadata;

@@ -1,4 +1,4 @@
-package project.lanshan.JavaRPC.Provider.Publisher;
+package project.lanshan.javarpc.provider.publisher;
 
 public interface ProviderPublisher {
 	public Boolean publish();

@@ -1,6 +1,7 @@
-package project.lanshan.JavaRPC.Provider.Publisher;
+package project.lanshan.javarpc.provider.publisher;
 
-import project.lanshan.JavaRPC.Provider.Netty.Provider;
+import project.lanshan.javarpc.provider.netty.Provider;
+
 
 public class DefaultPublisher implements ProviderPublisher{
 	

@@ -1,4 +1,4 @@
-package project.lanshan.JavaRPC.Provider.Netty;
+package project.lanshan.javarpc.provider.netty;
 
 public interface Provider{
 	public boolean startPublish();

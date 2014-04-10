@@ -1,12 +1,13 @@
-package project.lanshan.JavaRPC.Consumer;
+package project.lanshan.javarpc.spring;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.InitializingBean;
 
-import project.lanshan.JavaRPC.Consumer.Caller.ConsumerCaller;
-import project.lanshan.JavaRPC.model.Request;
+import project.lanshan.javarpc.consumer.caller.ConsumerCaller;
+import project.lanshan.javarpc.model.Request;
+
 
 
 public class SpringConsumerBean implements InitializingBean{

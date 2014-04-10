@@ -1,4 +1,4 @@
-package project.lanshan.JavaRPC.Consumer.Interceptor;
+package project.lanshan.javarpc.consumer.interceptor;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -8,8 +8,9 @@ import org.springframework.aop.framework.ProxyFactoryBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import project.lanshan.JavaRPC.Consumer.SpringConsumerBean;
-import project.lanshan.JavaRPC.model.Request;
+import project.lanshan.javarpc.model.Request;
+import project.lanshan.javarpc.spring.SpringConsumerBean;
+
 
 public class ActualMethod implements MethodInterceptor{
 
