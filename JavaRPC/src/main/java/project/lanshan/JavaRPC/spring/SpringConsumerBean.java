@@ -3,49 +3,76 @@ package project.lanshan.javarpc.spring;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import project.lanshan.javarpc.consumer.caller.ConsumerCaller;
 import project.lanshan.javarpc.model.Request;
+import project.lanshan.javarpc.zookeeper.ZookeeperService;
 
 
 
-public class SpringConsumerBean implements InitializingBean{
-	
-	private static Logger log = Logger.getLogger(SpringConsumerBean.class.getName());
-	private ConsumerCaller consumerCaller;
-	private final AtomicBoolean inited = new AtomicBoolean(false);
-	
+public class SpringConsumerBean implements InitializingBean ,FactoryBean<Object>{
 
-	public SpringConsumerBean(){}
-	
-	
-	@Override
-	public void afterPropertiesSet() throws Exception {
-		if(!inited.compareAndSet(false, true)){
-			log.error("Consumer has been inited!");
-			return;
-		}
-		
-	}
-	
-	
+  private static Logger log = Logger.getLogger(SpringConsumerBean.class.getName());
+  @Autowired
+  private ConsumerCaller consumerCaller;
+  @Autowired
+  private ZookeeperService zookeeperService;
+  private final AtomicBoolean inited = new AtomicBoolean(false);
 
 
 
-	public ConsumerCaller getConsumerCaller() {
-		return consumerCaller;
-	}
+  @Override
+  public void afterPropertiesSet() throws Exception {
+    if (!inited.compareAndSet(false, true)) {
+      log.error("Consumer has been inited!");
+      return;
+    }
+    subscribeFromZookeeper();
+    init();
+  }
 
-	public void setConsumerCaller(ConsumerCaller consumerCaller) {
-		this.consumerCaller = consumerCaller;
-	}
 
-	public Object getObject(){
-		return consumerCaller.getObject();
-	}
-	public void setRequest(Request request){
-		consumerCaller.setRequest(request);
-	}
-	
+  private void init() {
+    if( !consumerCaller.call())
+    log.error("fail to consumer the service!"); 
+    System.exit(1);
+  }
+
+
+  private void subscribeFromZookeeper() {
+    zookeeperService.subscribe(consumerCaller.getMetadata());
+  }
+
+  public Object getObject() {
+    return consumerCaller.getObject();
+  }
+
+  public void setRequest(Request request) {
+    consumerCaller.setRequest(request);
+  }
+
+  public void setHost(String host) {
+    consumerCaller.getMetadata().setHost(host);
+  }
+
+  public void setPort(int port) {
+    consumerCaller.getMetadata().setPort(port);
+  }
+
+  public void setServiceName(String serviceName) {
+    consumerCaller.getMetadata().setServiceName(serviceName);
+  }
+
+  @Override
+  public Class<?> getObjectType() {
+    return consumerCaller.getObjectType();
+  }
+
+  @Override
+  public boolean isSingleton() {
+    return true;
+  }
 }

@@ -4,7 +4,10 @@ public class ServiceMetadata {
 	
 	private String serviceClass;
 	private String serviceName;
+	private Class<?> clazz;
 	private String serializableWay;
+	private String host;
+	private int port;
 	
 	public ServiceMetadata(){
 		this.serviceClass = "";
@@ -36,4 +39,34 @@ public class ServiceMetadata {
 	public void setServiceClass(String serviceClass) {
 		this.serviceClass = serviceClass;
 	}
+
+
+  public String getHost() {
+    return host;
+  }
+
+
+  public void setHost(String host) {
+    this.host = host;
+  }
+
+
+  public int getPort() {
+    return port;
+  }
+
+
+  public void setPort(int port) {
+    this.port = port;
+  }
+
+
+  public Class<?> getClazz() {
+    return clazz;
+  }
+
+
+  public void setClazz(Class<?> clazz) {
+    this.clazz = clazz;
+  }
 }

@@ -3,8 +3,8 @@ package project.lanshan.javarpc.consumer.netty;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Service;
 
-import project.lanshan.javarpc.model.RPCInetAddress;
 import project.lanshan.javarpc.model.Request;
 import project.lanshan.javarpc.model.Response;
 import project.lanshan.javarpc.model.ServiceMetadata;
@@ -20,21 +20,20 @@ import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 
+@Service
 public class NettyConsumer implements Consumer{
 	private static Logger log = Logger.getLogger(NettyConsumer.class.getName());
 	
 
 	private Request request;
 	private ServiceMetadata metadata;
-	private Object object;
-	private RPCInetAddress providerAddress;
+	private Object object = null;
 	private AtomicBoolean hasObject;
 
 
 	
 	public NettyConsumer(){
 		metadata = new ServiceMetadata();
-		providerAddress = new RPCInetAddress();
 		hasObject = new AtomicBoolean(false);
 	}
 	
@@ -59,7 +58,7 @@ public class NettyConsumer implements Consumer{
 				}
 			});
 
-			bootstrap.connect(providerAddress.getHost(),providerAddress.getPort()).sync().channel().closeFuture().sync();
+			bootstrap.connect(metadata.getHost(),metadata.getPort()).sync().channel().closeFuture().sync();
 		} finally {
 			workerGroup.shutdownGracefully();
 		}
@@ -78,6 +77,7 @@ public class NettyConsumer implements Consumer{
 		public void channelRead(ChannelHandlerContext ctx, Object msg) {
 			Response response = (Response)msg;
 			object = response.getResponseObject();
+			hasObject.compareAndSet(false, true);
 			ctx.close();
 		}
 
@@ -137,22 +137,43 @@ public class NettyConsumer implements Consumer{
 	}
 
 	public String getHost() {
-		return providerAddress.getHost();
+		return metadata.getHost();
 	}
 	public void setHost(String host) {
-		providerAddress.setHost(host);
+	  metadata.setHost(host);
 	}
 	public int getPort() {
-		return providerAddress.getPort();
+		return metadata.getPort();
 	}
 	public void setPort(int port) {
-		providerAddress.setPort(port);
+	  metadata.setPort(port);
 	}
 
 	@Override
 	public void setRequest(Request request) {
 		this.request = request;
 	}
+
+
+  @Override
+  public Class<?> getObjectType() {
+    if(object != null)
+      return object.getClass();
+    else
+      return null;
+  }
+
+
+  @Override
+  public ServiceMetadata getMetadata() {
+    return metadata;
+  }
+
+
+  @Override
+  public void setMetadata(ServiceMetadata metadata) {
+    this.metadata = metadata;
+  }
 
 	
 

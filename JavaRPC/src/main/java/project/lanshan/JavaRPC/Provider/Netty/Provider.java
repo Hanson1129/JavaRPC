@@ -1,5 +1,13 @@
 package project.lanshan.javarpc.provider.netty;
 
-public interface Provider{
-	public boolean startPublish();
+import project.lanshan.javarpc.model.ServiceMetadata;
+
+public interface Provider {
+  public boolean startPublish();
+
+  public void setHost(String host);
+
+  public void setPort(int port);
+
+  public ServiceMetadata getMeatadata();
 }

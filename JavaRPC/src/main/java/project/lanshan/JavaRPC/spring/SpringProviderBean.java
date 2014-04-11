@@ -4,8 +4,10 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import project.lanshan.javarpc.provider.publisher.ProviderPublisher;
+import project.lanshan.javarpc.zookeeper.ZookeeperService;
 
 
 
@@ -14,6 +16,9 @@ public class SpringProviderBean implements InitializingBean{
 	private static Logger log = Logger.getLogger(SpringProviderBean.class.getName());
 	
 	private ProviderPublisher providerPublisher;
+	
+	@Autowired
+	private ZookeeperService zookeeperService;
 	
 	private static AtomicBoolean isProvided = new AtomicBoolean(false);
 	private final AtomicBoolean inited = new AtomicBoolean(false);
@@ -24,11 +29,16 @@ public class SpringProviderBean implements InitializingBean{
 			return;
 		if(!isProvided.compareAndSet(false,true))
 			return;
-		Config();
+		registerToZookeeper();
+		publish();
 	}
 	
-	private void Config() {
-	}
+	private void registerToZookeeper() {
+      if( !zookeeperService.subscribe(providerPublisher.getMetadata()))
+        log.error("fail to regiter service!");
+      System.exit(1);
+    }
+
 	
 	public void publish(){
 		providerPublisher.publish();
@@ -41,7 +51,17 @@ public class SpringProviderBean implements InitializingBean{
 		this.providerPublisher = providerPublisher;
 	}
 
-
 	
-
+	public void setServiceName(String serviceName){
+	  providerPublisher.getMetadata().setServiceName(serviceName);
+	}
+	public void setHost(String host){
+	  providerPublisher.getMetadata().setHost(host);
+	}
+	public void setPort(int port){
+	  providerPublisher.getMetadata().setPort(port);
+	}
+	public void setServiceClass(String serviceClass){
+	  providerPublisher.getMetadata().setServiceClass(serviceClass);
+	}
 }

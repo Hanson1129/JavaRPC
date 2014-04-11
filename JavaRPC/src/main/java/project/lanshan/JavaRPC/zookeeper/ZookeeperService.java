@@ -1,5 +1,8 @@
 package project.lanshan.javarpc.zookeeper;
 
-public class ZookeeperService {
+import project.lanshan.javarpc.model.ServiceMetadata;
 
+public interface ZookeeperService {
+  public boolean register(ServiceMetadata metadata);
+  public boolean subscribe(ServiceMetadata matadata);
 }

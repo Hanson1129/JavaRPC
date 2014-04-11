@@ -4,8 +4,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Service;
 
-import project.lanshan.javarpc.model.RPCInetAddress;
 import project.lanshan.javarpc.model.Request;
 import project.lanshan.javarpc.model.Response;
 import project.lanshan.javarpc.model.ServiceMetadata;
@@ -22,17 +22,16 @@ import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 
 
+@Service
 public class NettyProvider implements Provider{
 	
 	private static Logger log = Logger.getLogger(NettyProvider.class.getName());
 	
 	private ServiceMetadata metadata;
 	
-	private RPCInetAddress providerAddress;
 	
 	public NettyProvider(){
 		metadata = new ServiceMetadata();
-		providerAddress = new RPCInetAddress();
 	}
 	
 	
@@ -59,11 +58,11 @@ public class NettyProvider implements Provider{
 					});
 				
 			try {
-				bootstrap.bind(providerAddress.getPort()).sync().channel().closeFuture().sync();
+				bootstrap.bind(metadata.getPort()).sync().channel().closeFuture().sync();
 				log.info("bind successful.");
 				return true;
 			} catch (InterruptedException e) {
-				log.error("bind() at "+providerAddress.getPort()+" fail!");
+				log.error("bind() at "+metadata.getPort()+" fail!");
 				return false;
 			}
 		}finally{
@@ -175,18 +174,6 @@ public class NettyProvider implements Provider{
 			}
 		}
 	}
-	public String getHost() {
-		return providerAddress.getHost();
-	}
-	public void setHost(String host) {
-		providerAddress.setHost(host);
-	}
-	public int getPort() {
-		return providerAddress.getPort();
-	}
-	public void setPort(int port) {
-		providerAddress.setPort(port);
-	}
 	public String getServiceName() {
 		return metadata.getServiceName();
 	}
@@ -200,4 +187,25 @@ public class NettyProvider implements Provider{
 	public void setServiceClass(String serviceClass) {
 		metadata.setServiceClass(serviceClass);
 	}
+
+
+
+  @Override
+  public void setHost(String host) {
+    metadata.setHost(host);
+  }
+
+
+
+  @Override
+  public void setPort(int port) {
+    metadata.setPort(port);
+  }
+
+
+
+  @Override
+  public ServiceMetadata getMeatadata() {
+    return metadata;
+  }
 }
