@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
+import project.lanshan.javarpc.model.RPCInetAddress;
 import project.lanshan.javarpc.model.Request;
 import project.lanshan.javarpc.model.Response;
 import project.lanshan.javarpc.model.ServiceMetadata;
@@ -38,7 +39,7 @@ public class NettyConsumer implements Consumer{
 	}
 	
 	
-	public void startCall() throws InterruptedException {
+	public void startCall(RPCInetAddress address) throws InterruptedException {
 	
 		EventLoopGroup workerGroup = new NioEventLoopGroup();
 
@@ -58,7 +59,7 @@ public class NettyConsumer implements Consumer{
 				}
 			});
 
-			bootstrap.connect(metadata.getHost(),metadata.getPort()).sync().channel().closeFuture().sync();
+			bootstrap.connect(address.getHost(),address.getPort()).sync().channel().closeFuture().sync();
 		} finally {
 			workerGroup.shutdownGracefully();
 		}
@@ -108,11 +109,11 @@ public class NettyConsumer implements Consumer{
 	}
 
 
-	public Object getObject(){
+	public Object getObject(RPCInetAddress address){
 		if(hasObject.compareAndSet(false, true))
 			try {
 				if(checkOutRequest())
-					startCall();
+					startCall(address);
 				else{
 					log.error("hasn't finish request.");
 				}
@@ -122,6 +123,7 @@ public class NettyConsumer implements Consumer{
 			}
 		return object;
 	}
+
 
 	private boolean checkOutRequest() {
 		

@@ -6,62 +6,48 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
+import project.lanshan.javarpc.model.AddressHolder;
 import project.lanshan.javarpc.model.ServiceMetadata;
 
 @Service
 public class ZookeeperServiceImpl implements ZookeeperService {
 
-  private ZookeeperUtil zkUtil;
-  private static Logger logger = Logger.getLogger(ZookeeperServiceImpl.class);
+	private ZookeeperUtil zkUtil;
+	private static Logger logger = Logger.getLogger(ZookeeperServiceImpl.class);
 
-  @Override
-  public boolean register(ServiceMetadata metadata) {
-    AtomicBoolean result = new AtomicBoolean(false);
-    try {
-      zkUtil.createConnection();
-      result.compareAndSet(
-          false,
-          zkUtil.createPath(metadata.getServiceName(),
-              metadata.getHost() + ":" + metadata.getPort()));
-      zkUtil.releaseConnection();
-    } catch (IOException e) {
-      logger.error("fail to connect zk server!");
-    } catch (InterruptedException e) {
-      logger.error("fail to release zk connection!");
-    }
-    return result.get();
-  }
+	@Override
+	public boolean register(ServiceMetadata metadata) {
+		AtomicBoolean result = new AtomicBoolean(false);
+		try {
+			zkUtil.createConnection();
+			result.compareAndSet(false, zkUtil.registerProvider(metadata));
+			zkUtil.releaseConnection();
+		} catch (IOException e) {
+			logger.error("fail to connect zk server!");
+		} catch (InterruptedException e) {
+			logger.error("fail to release zk connection!");
+		}
+		return result.get();
+	}
 
-  @Override
-  public boolean subscribe(ServiceMetadata metadata) {
-    AtomicBoolean result = new AtomicBoolean(false);
-    String serverAddress;
+	@Override
+	public AddressHolder subscribe(ServiceMetadata metadata) {
+		AddressHolder addressHolder = new AddressHolder();
+		try {
+			zkUtil.createConnection();
 
-    try {
-      zkUtil.createConnection();
+			addressHolder.putAddresses(metadata.getServiceName(),zkUtil.getProviders(metadata.getServiceName()));
 
-      serverAddress = zkUtil.readData(metadata.getServiceName());
+			zkUtil.releaseConnection();
+			if(addressHolder.size() > 0)
+				return addressHolder;
+		} catch (IOException e) {
+			logger.error("fail to connect zk server!");
+		} catch (InterruptedException e) {
+			logger.error("fail to release zk connection!");
+		}
+		return addressHolder;
+	}
 
-      if (validateAddress(serverAddress, metadata))
-        result.compareAndSet(false, true);
-
-      zkUtil.releaseConnection();
-    } catch (IOException e) {
-      logger.error("fail to connect zk server!");
-    } catch (InterruptedException e) {
-      logger.error("fail to release zk connection!");
-    }
-    return result.get();
-  }
-
-  public boolean validateAddress(String address, ServiceMetadata metadata) {
-    String host = address.substring(0, address.indexOf(":"));
-    int port = Integer.parseInt(address.substring(address.indexOf(":"), address.length()));
-    if (host.length() > 0 && port != 0) {
-      metadata.setHost(host);
-      metadata.setPort(port);
-      return true;
-    }
-    return false;
-  }
+	
 }

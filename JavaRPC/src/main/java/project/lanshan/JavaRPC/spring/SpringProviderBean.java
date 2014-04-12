@@ -34,7 +34,7 @@ public class SpringProviderBean implements InitializingBean{
 	}
 	
 	private void registerToZookeeper() {
-      if( !zookeeperService.subscribe(providerPublisher.getMetadata()))
+      if( !zookeeperService.register((providerPublisher.getMetadata())))
         log.error("fail to regiter service!");
       System.exit(1);
     }
