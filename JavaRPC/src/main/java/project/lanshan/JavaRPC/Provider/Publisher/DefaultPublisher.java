@@ -1,11 +1,15 @@
 package project.lanshan.javarpc.provider.publisher;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import project.lanshan.javarpc.model.ServiceMetadata;
 import project.lanshan.javarpc.provider.netty.Provider;
 
-
+@Service
 public class DefaultPublisher implements ProviderPublisher{
 	
+	@Autowired
 	private Provider provider;
 	
 	@Override

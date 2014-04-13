@@ -1,4 +1,4 @@
-package project.lanshan.JavaRPC.firsttest;
+package project.lanshan.javarpc.firsttest;
 
 public interface Action {
 	public String getWords();

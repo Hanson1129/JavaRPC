@@ -1,4 +1,4 @@
-package project.lanshan.JavaRPC;
+package project.lanshan.javarpc;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

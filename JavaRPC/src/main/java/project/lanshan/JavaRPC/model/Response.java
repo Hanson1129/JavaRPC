@@ -9,8 +9,10 @@ public class Response implements Serializable{
 	 */
 	private static final long serialVersionUID = 1405236342156451097L;
 	private Object ResponseObject;
-	public Response(Object ResponseObject){
+	Class<?> clazz;
+	public Response(Object ResponseObject,Class<?> clazz){
 		this.ResponseObject = ResponseObject;
+		this.clazz = clazz;
 	}
 
 	public Object getResponseObject() {
@@ -19,6 +21,10 @@ public class Response implements Serializable{
 
 	public void setResponseObject(Object responseObject) {
 		ResponseObject = responseObject;
+	}
+
+	public Class<?> getObjectClzss() {
+		return clazz;
 	}
 
 }

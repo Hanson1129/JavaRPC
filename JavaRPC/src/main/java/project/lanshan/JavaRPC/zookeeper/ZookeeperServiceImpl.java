@@ -12,7 +12,7 @@ import project.lanshan.javarpc.model.ServiceMetadata;
 @Service
 public class ZookeeperServiceImpl implements ZookeeperService {
 
-	private ZookeeperUtil zkUtil;
+	private ZookeeperUtil zkUtil = new ZookeeperUtil();
 	private static Logger logger = Logger.getLogger(ZookeeperServiceImpl.class);
 
 	@Override

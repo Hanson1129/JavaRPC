@@ -17,6 +17,7 @@ public class SpringConsumerBean implements InitializingBean,
 
 	private static Logger log = Logger.getLogger(SpringConsumerBean.class
 			.getName());
+	
 	@Autowired
 	private ConsumerCaller consumerCaller;
 	@Autowired
@@ -37,9 +38,10 @@ public class SpringConsumerBean implements InitializingBean,
 	}
 
 	private void init() {
-		if (!consumerCaller.call(addresses))
+		if (!consumerCaller.call(addresses)){
 			log.error("fail to consumer the service!");
-		System.exit(1);
+			System.exit(1);
+		}
 	}
 
 	private void subscribeFromZookeeper() {
@@ -70,7 +72,9 @@ public class SpringConsumerBean implements InitializingBean,
 	public void setServiceName(String serviceName) {
 		consumerCaller.getMetadata().setServiceName(serviceName);
 	}
-
+	public void setCallWay(String callWay){
+		consumerCaller.getMetadata().setCallWay(callWay);
+	}
 	@Override
 	public Class<?> getObjectType() {
 		return consumerCaller.getObjectType();

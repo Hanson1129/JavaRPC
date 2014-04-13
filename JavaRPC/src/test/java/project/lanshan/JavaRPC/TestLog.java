@@ -1,4 +1,4 @@
-package project.lanshan.JavaRPC;
+package project.lanshan.javarpc;
 
 import org.apache.log4j.Logger;
 

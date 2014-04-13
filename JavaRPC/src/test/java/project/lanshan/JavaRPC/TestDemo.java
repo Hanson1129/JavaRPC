@@ -1,4 +1,4 @@
-package project.lanshan.JavaRPC;
+package project.lanshan.javarpc;
 
 public class TestDemo {
 	private String A;

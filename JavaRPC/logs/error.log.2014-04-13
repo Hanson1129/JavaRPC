@@ -1,0 +1,341 @@
+2014-04-13 23:32:35  [ main-EventThread:11737 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:33:31  [ main-EventThread:23722 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:34:14  [ main-EventThread:110521 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:34:20  [ main-EventThread:116357 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:35:16  [ main-EventThread:1392 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:36:55  [ main-EventThread:29280 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:39:28  [ main-EventThread:1235 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:39:28  [ main-EventThread:1348 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:39:28  [ main-EventThread:1629 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:41:56  [ main-EventThread:65496 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:43:23  [ main-EventThread:1510 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:43:23  [ main:1558 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:43:23  [ main-EventThread:1719 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:43:23  [ main:1723 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:43:23  [ main-EventThread:1856 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:43:23  [ main:1860 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:45:26  [ main-EventThread:1109 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:45:26  [ main:1123 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:45:26  [ main-EventThread:1225 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:45:26  [ main:1227 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:45:26  [ main-EventThread:1326 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:45:26  [ main:1330 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:45:51  [ main-EventThread:1210 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:45:51  [ main:1227 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:45:51  [ main-EventThread:1313 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:45:51  [ main:1316 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:45:52  [ main-EventThread:1412 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:45:52  [ main:1414 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:46:13  [ main-EventThread:1322 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:46:13  [ main:1349 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:46:13  [ main-EventThread:1465 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:46:13  [ main:1466 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:46:13  [ main-EventThread:1577 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:46:13  [ main:1578 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:47:03  [ main-EventThread:11131 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:47:24  [ main:31778 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:49:11  [ main-EventThread:1414 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:49:11  [ main:1434 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:49:12  [ main-EventThread:1591 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:49:12  [ main:1592 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:49:12  [ main-EventThread:1691 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:49:12  [ main:1692 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:49:22  [ main-EventThread:11785 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:50:08  [ main-EventThread:1217 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:50:08  [ main:1235 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:50:08  [ main-EventThread:1429 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:50:08  [ main:1430 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:50:08  [ main-EventThread:1564 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:50:08  [ main:1568 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:50:18  [ main-EventThread:10916 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:52:35  [ main-EventThread:1324 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:52:35  [ main:1350 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:52:36  [ main-EventThread:1515 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:52:36  [ main:1516 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:52:36  [ main-EventThread:1677 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:52:36  [ main:1678 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:52:44  [ main-EventThread:9457 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:54:20  [ main-EventThread:1097 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:54:20  [ main-EventThread:1243 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:54:20  [ main-EventThread:1377 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:54:27  [ main-EventThread:8689 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:55:02  [ main-EventThread:1402 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:55:02  [ main-EventThread:1509 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:55:02  [ main-EventThread:1784 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:55:05  [ main-EventThread:4431 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:55:05  [ main:4589 ] - [ ERROR ]  节点创建失败，发生KeeperException
+
+2014-04-13 23:57:01  [ main-EventThread:1734 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:57:01  [ main-EventThread:1891 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:57:02  [ main-EventThread:2049 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:57:02  [ main-EventThread:2279 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:57:02  [ main:2396 ] - [ ERROR ]  节点创建失败，发生KeeperException
+
+2014-04-13 23:57:22  [ main-EventThread:938 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:57:22  [ main:952 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:57:22  [ main-EventThread:1142 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:57:22  [ main:1143 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:57:22  [ main-EventThread:1223 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:57:22  [ main:1225 ] - [ ERROR ]  读取数据失败，发生KeeperException，path: getWords
+
+2014-04-13 23:57:22  [ main-EventThread:1316 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:57:48  [ main-EventThread:1153 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:57:48  [ main-EventThread:1238 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:57:48  [ main-EventThread:1316 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:57:48  [ main-EventThread:1525 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:57:48  [ main:1590 ] - [ ERROR ]  节点创建失败，发生KeeperException
+
+2014-04-13 23:58:41  [ main-EventThread:9417 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2014-04-13 23:59:40  [ main-EventThread:9546 ] - [ ERROR ]  Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)

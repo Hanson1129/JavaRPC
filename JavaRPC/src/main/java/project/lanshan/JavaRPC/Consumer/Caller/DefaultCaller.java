@@ -1,13 +1,19 @@
 package project.lanshan.javarpc.consumer.caller;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import project.lanshan.javarpc.consumer.netty.Consumer;
 import project.lanshan.javarpc.model.AddressHolder;
 import project.lanshan.javarpc.model.RPCInetAddress;
 import project.lanshan.javarpc.model.Request;
 import project.lanshan.javarpc.model.ServiceMetadata;
 
+@Service
 public class DefaultCaller implements ConsumerCaller {
 
+	@Autowired
 	private Consumer consumer;
 	private RPCInetAddress targetAddress = null;
 	
@@ -16,7 +22,7 @@ public class DefaultCaller implements ConsumerCaller {
 
 	@Override
 	public boolean call(AddressHolder addresses) {
-		targetAddress = selectAddressFromHolder(addresses);
+		targetAddress = selectAddressFromHolder(addresses,consumer.getMetadata());
 		try {
 			consumer.startCall(targetAddress);
 		} catch (InterruptedException e) {
@@ -28,9 +34,9 @@ public class DefaultCaller implements ConsumerCaller {
 			return false;
 	}
 
-	private RPCInetAddress selectAddressFromHolder(AddressHolder addresses) {
-		// TODO 这里缺少选址算法 
-		return null;
+	private RPCInetAddress selectAddressFromHolder(AddressHolder addresses,ServiceMetadata metadata) {
+		//TODO for test
+		return addresses.getAddresses(metadata.getServiceName()).get(0);
 	}
 
 	@Override
@@ -38,7 +44,7 @@ public class DefaultCaller implements ConsumerCaller {
 		if(targetAddress != null)
 		return consumer.getObject(targetAddress);
 		else{
-			targetAddress = selectAddressFromHolder(addresses);
+			targetAddress = selectAddressFromHolder(addresses,consumer.getMetadata());
 			return consumer.getObject(targetAddress);
 		}
 	}

@@ -15,11 +15,11 @@ public class SpringProviderBean implements InitializingBean{
 	
 	private static Logger log = Logger.getLogger(SpringProviderBean.class.getName());
 	
+	@Autowired
 	private ProviderPublisher providerPublisher;
 	
 	@Autowired
 	private ZookeeperService zookeeperService;
-	
 	private static AtomicBoolean isProvided = new AtomicBoolean(false);
 	private final AtomicBoolean inited = new AtomicBoolean(false);
 	
@@ -34,9 +34,10 @@ public class SpringProviderBean implements InitializingBean{
 	}
 	
 	private void registerToZookeeper() {
-      if( !zookeeperService.register((providerPublisher.getMetadata())))
+      if( !zookeeperService.register((providerPublisher.getMetadata()))){
         log.error("fail to regiter service!");
-      System.exit(1);
+        System.exit(1);
+      }
     }
 
 	
@@ -50,7 +51,6 @@ public class SpringProviderBean implements InitializingBean{
 	public void setProviderPublisher(ProviderPublisher providerPublisher) {
 		this.providerPublisher = providerPublisher;
 	}
-
 	
 	public void setServiceName(String serviceName){
 	  providerPublisher.getMetadata().setServiceName(serviceName);

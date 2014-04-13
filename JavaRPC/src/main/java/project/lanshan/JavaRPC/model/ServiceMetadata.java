@@ -7,6 +7,7 @@ public class ServiceMetadata {
 	private Class<?> clazz;
 	private String serializableWay;
 	private String host;
+	private String callWay;
 	private int port;
 	
 	public ServiceMetadata(){
@@ -69,4 +70,14 @@ public class ServiceMetadata {
   public void setClazz(Class<?> clazz) {
     this.clazz = clazz;
   }
+
+
+public String getCallWay() {
+	return callWay;
+}
+
+
+public void setCallWay(String callWay) {
+	this.callWay = callWay;
+}
 }

@@ -1,4 +1,4 @@
-package project.lanshan.JavaRPC.firsttest;
+package project.lanshan.javarpc.firsttest;
 
 public class ProviderAction implements Action{
 

@@ -11,19 +11,12 @@
     <context:component-scan base-package="project.lanshan.javarpc" >
     </context:component-scan>
     
-    <!-- provider -->
-    <bean id="PService" class="project.lanshan.javarpc.spring.SpringProviderBean">
-   		<property name="serviceName" value="getWords"/>
-   		<property name="serviceClass" value="project.lanshan.javarpc.firsttest.ProviderAction"/>
-   		<property name="host" value="127.0.0.1"/>
-   		<property name="port" value="3789"/>
-    </bean>
+    
     
  
-    
-    <!-- consumer
+    <!-- consumer -->
     <bean id="CService" class="project.lanshan.javarpc.spring.SpringConsumerBean">
    		 <property name="serviceName" value="getWords"/>
+   		 <property name="callWay" value="object"/>
     </bean>
- -->   
 </beans>

@@ -22,25 +22,23 @@ import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 
 @Service
-public class NettyConsumer implements Consumer{
+public class NettyConsumer implements Consumer {
 	private static Logger log = Logger.getLogger(NettyConsumer.class.getName());
-	
 
 	private Request request;
+	private Class<?> objectClazz;
 	private ServiceMetadata metadata;
 	private Object object = null;
 	private AtomicBoolean hasObject;
 
-
-	
-	public NettyConsumer(){
+	public NettyConsumer() {
+		request = new Request();
 		metadata = new ServiceMetadata();
 		hasObject = new AtomicBoolean(false);
 	}
-	
-	
+
 	public void startCall(RPCInetAddress address) throws InterruptedException {
-	
+
 		EventLoopGroup workerGroup = new NioEventLoopGroup();
 
 		try {
@@ -59,29 +57,29 @@ public class NettyConsumer implements Consumer{
 				}
 			});
 
-			bootstrap.connect(address.getHost(),address.getPort()).sync().channel().closeFuture().sync();
+			bootstrap.connect(address.getHost(), address.getPort()).sync()
+					.channel().closeFuture().sync();
 		} finally {
 			workerGroup.shutdownGracefully();
 		}
 	}
 
-
-
 	private class ReceiveObjectHandler extends ChannelHandlerAdapter {
 
 		@Override
 		public void channelActive(ChannelHandlerContext ctx) {
-			ctx.writeAndFlush(request);
+			if (checkOutRequest())
+				ctx.writeAndFlush(request);
 		}
 
 		@Override
 		public void channelRead(ChannelHandlerContext ctx, Object msg) {
-			Response response = (Response)msg;
+			Response response = (Response) msg;
 			object = response.getResponseObject();
+			objectClazz = response.getObjectClzss();
 			hasObject.compareAndSet(false, true);
 			ctx.close();
 		}
-
 
 		@Override
 		public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
@@ -90,11 +88,10 @@ public class NettyConsumer implements Consumer{
 		}
 	}
 
-
-	
 	public String getServiceName() {
 		return metadata.getServiceName();
 	}
+
 	public void setServiceName(String serviceName) {
 		metadata.setServiceName(serviceName);
 	}
@@ -103,18 +100,16 @@ public class NettyConsumer implements Consumer{
 		return metadata.getServiceClass();
 	}
 
-
 	public void setServiceClass(String serviceClass) {
 		metadata.setServiceClass(serviceClass);
 	}
 
-
-	public Object getObject(RPCInetAddress address){
-		if(hasObject.compareAndSet(false, true))
+	public Object getObject(RPCInetAddress address) {
+		if (hasObject.compareAndSet(false, true))
 			try {
-				if(checkOutRequest())
+				if (checkOutRequest())
 					startCall(address);
-				else{
+				else {
 					log.error("hasn't finish request.");
 				}
 			} catch (InterruptedException e) {
@@ -124,13 +119,14 @@ public class NettyConsumer implements Consumer{
 		return object;
 	}
 
-
 	private boolean checkOutRequest() {
-		
-		if(request.getClassName().length() == 0 )
+
+		if (request.getClassName().length() == 0)
 			request.setClassName(metadata.getServiceClass());
-		if(request.getServiceName().length() == 0)
+		if (request.getServiceName().length() == 0)
 			request.setServiceName(metadata.getServiceName());
+		if (metadata.getCallWay().length() > 0)
+			request.setCallWay(metadata.getCallWay());
 		return true;
 	}
 
@@ -141,14 +137,17 @@ public class NettyConsumer implements Consumer{
 	public String getHost() {
 		return metadata.getHost();
 	}
+
 	public void setHost(String host) {
-	  metadata.setHost(host);
+		metadata.setHost(host);
 	}
+
 	public int getPort() {
 		return metadata.getPort();
 	}
+
 	public void setPort(int port) {
-	  metadata.setPort(port);
+		metadata.setPort(port);
 	}
 
 	@Override
@@ -156,28 +155,22 @@ public class NettyConsumer implements Consumer{
 		this.request = request;
 	}
 
+	@Override
+	public Class<?> getObjectType() {
+		if (object == null)
+			return null;
+		else
+			return objectClazz;
+	}
 
-  @Override
-  public Class<?> getObjectType() {
-    if(object != null)
-      return object.getClass();
-    else
-      return null;
-  }
+	@Override
+	public ServiceMetadata getMetadata() {
+		return metadata;
+	}
 
-
-  @Override
-  public ServiceMetadata getMetadata() {
-    return metadata;
-  }
-
-
-  @Override
-  public void setMetadata(ServiceMetadata metadata) {
-    this.metadata = metadata;
-  }
-
-	
-
+	@Override
+	public void setMetadata(ServiceMetadata metadata) {
+		this.metadata = metadata;
+	}
 
 }

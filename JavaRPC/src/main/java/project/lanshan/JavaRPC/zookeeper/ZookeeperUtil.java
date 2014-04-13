@@ -57,14 +57,14 @@ public class ZookeeperUtil {
 	 */
 	public boolean registerProvider(ServiceMetadata metadata) {
 		try {
-			if (!exits(metadata.getServiceName()))
-				zookeeper.create(metadata.getServiceName(),
+			if (!exits("/"+metadata.getServiceName()))
+				zookeeper.create("/"+metadata.getServiceName(),
 						"provider".getBytes(), Ids.OPEN_ACL_UNSAFE,
-						CreateMode.EPHEMERAL);
-			String path = zookeeper.create(metadata.getServiceName() + "/"
+						CreateMode.PERSISTENT);
+			String path = zookeeper.create("/"+metadata.getServiceName() + "/"
 					+ metadata.getHost() + ":" + metadata.getPort(),
 					"provider".getBytes(), Ids.OPEN_ACL_UNSAFE,
-					CreateMode.EPHEMERAL);
+					CreateMode.PERSISTENT);
 			if (path.length() > 0)
 				return true;
 			else
@@ -87,10 +87,10 @@ public class ZookeeperUtil {
 	public List<RPCInetAddress> getProviders(String serviceName) {
 		List<RPCInetAddress> addresses = new ArrayList<RPCInetAddress>();
 		try {
-			List<String> addressesString = zookeeper.getChildren(serviceName, false);
+			List<String> addressesString = zookeeper.getChildren("/"+serviceName, false);
 			for(String address : addressesString){
 				String host = address.substring(0,address.indexOf(":"));
-				int port = Integer.parseInt(address.substring(address.indexOf(":"),address.length()));
+				int port = Integer.parseInt(address.substring(address.indexOf(":")+1,address.length()));
 				if(host.length() > 0 && port != 0)
 				addresses.add(new RPCInetAddress(host, port));
 			}
