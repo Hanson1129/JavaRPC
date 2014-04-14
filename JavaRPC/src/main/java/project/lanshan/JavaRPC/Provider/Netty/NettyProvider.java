@@ -81,7 +81,7 @@ public class NettyProvider implements Provider {
 			Request request = (Request) msg;
 			Response response;
 
-			if (!request.getServiceName().equals(metadata.getServiceName())) {
+			if (!request.getInterfaceName().equals(metadata.getInterfaceName())) {
 				log.error("Server didn't provide request service.");
 				ctx.close();
 				return;
@@ -89,14 +89,14 @@ public class NettyProvider implements Provider {
 
 			if (request.getCallWay().equals("result")) {
 				if ((response = handleResult(request)) != null) {
-					ctx.write(response);
+					ctx.writeAndFlush(response);
 				} else {
 					ctx.close();
 				}
 
 			} else if (request.getCallWay().equals("object")) {
 				if ((response = handleObject(request)) != null) {
-					ctx.write(response);
+					ctx.writeAndFlush(response);
 				} else {
 					ctx.close();
 				}
@@ -116,7 +116,7 @@ public class NettyProvider implements Provider {
 		}
 
 		public Response handleResult(Request request) {
-			String interfaceClassName = metadata.getServiceClass();
+			String interfaceClassName = metadata.getImplClass();
 			String methodName = request.getServiceName();
 			Class<?>[] paramatersClass = request.getParametersClass();
 			Object[] paramatersObjects = request.getParametersObject();
@@ -157,7 +157,7 @@ public class NettyProvider implements Provider {
 		}
 
 		public Response handleObject(Request request) {
-			String interfaceClassName = metadata.getServiceClass();
+			String interfaceClassName = metadata.getImplClass();
 			try {
 				Class<?> interfaceClazz = Class.forName(interfaceClassName);
 				return new Response(interfaceClazz.newInstance(),interfaceClazz);
@@ -174,20 +174,13 @@ public class NettyProvider implements Provider {
 		}
 	}
 
-	public String getServiceName() {
-		return metadata.getServiceName();
+
+	public String getInterfaceName() {
+		return metadata.getInterfaceName();
 	}
 
-	public void setServiceName(String serviceName) {
-		metadata.setServiceName(serviceName);
-	}
-
-	public String getServiceClass() {
-		return metadata.getServiceClass();
-	}
-
-	public void setServiceClass(String serviceClass) {
-		metadata.setServiceClass(serviceClass);
+	public void setInterfaceName(String interfaceName) {
+		metadata.setInterfaceName(interfaceName);;
 	}
 
 	@Override

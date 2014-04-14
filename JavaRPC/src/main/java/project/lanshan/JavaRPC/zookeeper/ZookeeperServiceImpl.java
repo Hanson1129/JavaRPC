@@ -36,7 +36,7 @@ public class ZookeeperServiceImpl implements ZookeeperService {
 		try {
 			zkUtil.createConnection();
 
-			addressHolder.putAddresses(metadata.getServiceName(),zkUtil.getProviders(metadata.getServiceName()));
+			addressHolder.putAddresses(metadata.getInterfaceName(),zkUtil.getProviders(metadata.getInterfaceName()));
 
 			zkUtil.releaseConnection();
 			if(addressHolder.size() > 0)

@@ -16,7 +16,7 @@
  
     <!-- consumer -->
     <bean id="CService" class="project.lanshan.javarpc.spring.SpringConsumerBean">
+    	 <property name="interfaceName" value="project.lanshan.javarpc.firsttest.Action"/>
    		 <property name="serviceName" value="getWords"/>
-   		 <property name="callWay" value="object"/>
     </bean>
 </beans>

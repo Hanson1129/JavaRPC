@@ -2,7 +2,8 @@ package project.lanshan.javarpc.model;
 
 public class ServiceMetadata {
 	
-	private String serviceClass;
+	private String interfaceName;
+	private String implClass;
 	private String serviceName;
 	private Class<?> clazz;
 	private String serializableWay;
@@ -11,17 +12,16 @@ public class ServiceMetadata {
 	private int port;
 	
 	public ServiceMetadata(){
-		this.serviceClass = "";
-		this.serviceName = "";
+		this.interfaceName = "";
 		this.serializableWay = "Netty";
 	}
 	
 	
-	public String getServiceName() {
-		return serviceName;
+	public String getInterfaceName() {
+		return interfaceName;
 	}
-	public void setServiceName(String serviceName) {
-		this.serviceName = serviceName;
+	public void setInterfaceName(String interfaceName) {
+		this.interfaceName = interfaceName;
 	}
 
 	public String getSerializableWay() {
@@ -31,15 +31,6 @@ public class ServiceMetadata {
 		this.serializableWay = serializableWay;
 	}
 
-
-	public String getServiceClass() {
-		return serviceClass;
-	}
-
-
-	public void setServiceClass(String serviceClass) {
-		this.serviceClass = serviceClass;
-	}
 
 
   public String getHost() {
@@ -79,5 +70,25 @@ public String getCallWay() {
 
 public void setCallWay(String callWay) {
 	this.callWay = callWay;
+}
+
+
+public String getServiceName() {
+	return serviceName;
+}
+
+
+public void setServiceName(String serviceName) {
+	this.serviceName = serviceName;
+}
+
+
+public String getImplClass() {
+	return implClass;
+}
+
+
+public void setImplClass(String implClass) {
+	this.implClass = implClass;
 }
 }

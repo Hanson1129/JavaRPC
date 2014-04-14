@@ -52,16 +52,16 @@ public class SpringProviderBean implements InitializingBean{
 		this.providerPublisher = providerPublisher;
 	}
 	
-	public void setServiceName(String serviceName){
-	  providerPublisher.getMetadata().setServiceName(serviceName);
+	public void setInterfaceName(String interfaceName){
+	  providerPublisher.getMetadata().setInterfaceName(interfaceName);;
+	}
+	public void setImplClass(String implClass){
+		providerPublisher.getMetadata().setImplClass(implClass);
 	}
 	public void setHost(String host){
 	  providerPublisher.getMetadata().setHost(host);
 	}
 	public void setPort(int port){
 	  providerPublisher.getMetadata().setPort(port);
-	}
-	public void setServiceClass(String serviceClass){
-	  providerPublisher.getMetadata().setServiceClass(serviceClass);
 	}
 }

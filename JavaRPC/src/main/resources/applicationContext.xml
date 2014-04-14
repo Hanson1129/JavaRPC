@@ -13,8 +13,8 @@
     
     <!-- provider -->
     <bean id="PService" class="project.lanshan.javarpc.spring.SpringProviderBean">
-   		<property name="serviceName" value="getWords"/>
-   		<property name="serviceClass" value="project.lanshan.javarpc.firsttest.ProviderAction"/>
+   		<property name="interfaceName" value="project.lanshan.javarpc.firsttest.Action"/>
+   		<property name="implClass" value="project.lanshan.javarpc.firsttest.ProviderAction"/>
    		<property name="host" value="127.0.0.1"/>
    		<property name="port" value="3789"/>
     </bean>

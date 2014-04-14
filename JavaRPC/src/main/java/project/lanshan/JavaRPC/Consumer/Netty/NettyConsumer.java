@@ -96,13 +96,10 @@ public class NettyConsumer implements Consumer {
 		metadata.setServiceName(serviceName);
 	}
 
-	public String getServiceClass() {
-		return metadata.getServiceClass();
+	public String getInterfaceName() {
+		return metadata.getInterfaceName();
 	}
 
-	public void setServiceClass(String serviceClass) {
-		metadata.setServiceClass(serviceClass);
-	}
 
 	public Object getObject(RPCInetAddress address) {
 		if (hasObject.compareAndSet(false, true))
@@ -121,12 +118,10 @@ public class NettyConsumer implements Consumer {
 
 	private boolean checkOutRequest() {
 
-		if (request.getClassName().length() == 0)
-			request.setClassName(metadata.getServiceClass());
-		if (request.getServiceName().length() == 0)
+		if (request.getInterfaceName() == null)
+			request.setInterfaceName(metadata.getInterfaceName());
+		if (request.getServiceName() == null)
 			request.setServiceName(metadata.getServiceName());
-		if (metadata.getCallWay().length() > 0)
-			request.setCallWay(metadata.getCallWay());
 		return true;
 	}
 

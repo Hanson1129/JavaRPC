@@ -57,11 +57,11 @@ public class ZookeeperUtil {
 	 */
 	public boolean registerProvider(ServiceMetadata metadata) {
 		try {
-			if (!exits("/"+metadata.getServiceName()))
-				zookeeper.create("/"+metadata.getServiceName(),
+			if (!exits("/"+metadata.getInterfaceName()))
+				zookeeper.create("/"+metadata.getInterfaceName(),
 						"provider".getBytes(), Ids.OPEN_ACL_UNSAFE,
 						CreateMode.PERSISTENT);
-			String path = zookeeper.create("/"+metadata.getServiceName() + "/"
+			String path = zookeeper.create("/"+metadata.getInterfaceName() + "/"
 					+ metadata.getHost() + ":" + metadata.getPort(),
 					"provider".getBytes(), Ids.OPEN_ACL_UNSAFE,
 					CreateMode.PERSISTENT);
@@ -84,10 +84,10 @@ public class ZookeeperUtil {
 	 *            节点path
 	 * @return
 	 */
-	public List<RPCInetAddress> getProviders(String serviceName) {
+	public List<RPCInetAddress> getProviders(String interfaceName) {
 		List<RPCInetAddress> addresses = new ArrayList<RPCInetAddress>();
 		try {
-			List<String> addressesString = zookeeper.getChildren("/"+serviceName, false);
+			List<String> addressesString = zookeeper.getChildren("/"+interfaceName, false);
 			for(String address : addressesString){
 				String host = address.substring(0,address.indexOf(":"));
 				int port = Integer.parseInt(address.substring(address.indexOf(":")+1,address.length()));
@@ -96,10 +96,10 @@ public class ZookeeperUtil {
 			}
 		return addresses;
 		} catch (KeeperException e) {
-			logger.error("读取数据失败，发生KeeperException，path: " + serviceName);
+			logger.error("读取数据失败，发生KeeperException，path: " + interfaceName);
 			return null;
 		} catch (InterruptedException e) {
-			logger.error("读取数据失败，发生 InterruptedException，path: " + serviceName);
+			logger.error("读取数据失败，发生 InterruptedException，path: " + interfaceName);
 			return null;
 		}
 	}
@@ -114,7 +114,7 @@ public class ZookeeperUtil {
 	 * @return
 	 */
 	public boolean updateAddress(ServiceMetadata metadata) {
-		deleteNode(metadata.getServiceName() + "/" + metadata.getHost() + ":"
+		deleteNode(metadata.getInterfaceName() + "/" + metadata.getHost() + ":"
 				+ metadata.getPort());
 		if (registerProvider(metadata))
 			return true;

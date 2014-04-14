@@ -7,7 +7,7 @@ import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import project.lanshan.javarpc.consumer.caller.ConsumerCaller;
+import project.lanshan.javarpc.consumer.caller.DefaultCaller;
 import project.lanshan.javarpc.model.AddressHolder;
 import project.lanshan.javarpc.model.Request;
 import project.lanshan.javarpc.zookeeper.ZookeeperService;
@@ -18,8 +18,8 @@ public class SpringConsumerBean implements InitializingBean,
 	private static Logger log = Logger.getLogger(SpringConsumerBean.class
 			.getName());
 	
-	@Autowired
-	private ConsumerCaller consumerCaller;
+	private static DefaultCaller consumerCaller = new DefaultCaller();
+	
 	@Autowired
 	private ZookeeperService zookeeperService;
 
@@ -50,10 +50,10 @@ public class SpringConsumerBean implements InitializingBean,
 
 	public Object getObject() {
 		if (addresses.size() > 0)
-			return consumerCaller.getObject(addresses);
+			return consumerCaller.getObject();
 		else {
 			subscribeFromZookeeper();
-			return consumerCaller.getObject(addresses);
+			return consumerCaller.getObject();
 		}
 	}
 
@@ -68,9 +68,11 @@ public class SpringConsumerBean implements InitializingBean,
 	public void setPort(int port) {
 		consumerCaller.getMetadata().setPort(port);
 	}
-
-	public void setServiceName(String serviceName) {
+	public void setServiceName(String serviceName){
 		consumerCaller.getMetadata().setServiceName(serviceName);
+	}
+	public void setInterfaceName(String interfaceName) {
+		consumerCaller.getMetadata().setInterfaceName(interfaceName);;
 	}
 	public void setCallWay(String callWay){
 		consumerCaller.getMetadata().setCallWay(callWay);
