@@ -702,3 +702,327 @@ java.lang.NullPointerException
 	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
 030 15,2014 12:30:07 上午 : INFO [main] Session: 0x14560c4c7330029 closed
 030 15,2014 12:30:07 上午 : INFO [main-EventThread] EventThread shut down
+056 15,2014 09:56:22 上午 : INFO [main] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1176e5f: startup date [Tue Apr 15 09:56:22 CST 2014]; root of context hierarchy
+056 15,2014 09:56:22 上午 : INFO [main] Loading XML bean definitions from class path resource [applicationContext.xml]
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:host.name=MININT-0NIHNS8.taobao.ali.com
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:java.version=1.7.0_17
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:java.vendor=Oracle Corporation
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:java.home=C:\Program Files (x86)\Java\jre7
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:java.class.path=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\test-classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1-sources.jar;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1.jar;D:\Download\apache-maven-2.2.1\repository\junit\junit\3.8.1\junit-3.8.1.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-aop\4.0.0.RELEASE\spring-aop-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-beans\4.0.0.RELEASE\spring-beans-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-context\4.0.0.RELEASE\spring-context-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-expression\4.0.0.RELEASE\spring-expression-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-core\4.0.0.RELEASE\spring-core-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\Download\apache-maven-2.2.1\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\Download\apache-maven-2.2.1\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\Download\apache-maven-2.2.1\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:java.library.path=C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\Program Files (x86)\WANdisco\Subversion;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.6.0_45/bin;C:\Program Files (x86)\Java\jdk1.6.0_45/jre/bin;D:\apache-maven-2.2.1/bin;D:\Program Files\TortoiseSVN\bin;D:\tomcat-tomcat-7.0.26\bin;D:\jboss-4.2.2.GA\bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;D:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;D:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;d:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;D:\SSH Secure Shell;.
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:java.io.tmpdir=C:\Users\HUANGS~1.HS\AppData\Local\Temp\
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:java.compiler=<NA>
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:os.name=Windows 7
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:os.arch=x86
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:os.version=6.1
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:user.name=huangsheng.hs
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:user.home=C:\Users\huangsheng.hs
+056 15,2014 09:56:24 上午 : INFO [main] Client environment:user.dir=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC
+056 15,2014 09:56:24 上午 : INFO [main] Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=10000 watcher=null
+056 15,2014 09:56:24 上午 : INFO [main-SendThread(127.0.0.1:2181)] Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+056 15,2014 09:56:24 上午 : INFO [main-SendThread(127.0.0.1:2181)] Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+056 15,2014 09:56:24 上午 : INFO [main-SendThread(127.0.0.1:2181)] Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x145631898c30000, negotiated timeout = 10000
+056 15,2014 09:56:24 上午 : ERROR [main-EventThread] Error while calling watcher 
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+056 15,2014 09:56:24 上午 : INFO [main] Session: 0x145631898c30000 closed
+056 15,2014 09:56:24 上午 : INFO [main-EventThread] EventThread shut down
+056 15,2014 09:56:40 上午 : INFO [main] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@15e4ae5: startup date [Tue Apr 15 09:56:40 CST 2014]; root of context hierarchy
+056 15,2014 09:56:40 上午 : INFO [main] Loading XML bean definitions from class path resource [consumer.xml]
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:host.name=MININT-0NIHNS8.taobao.ali.com
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:java.version=1.7.0_17
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:java.vendor=Oracle Corporation
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:java.home=C:\Program Files (x86)\Java\jre7
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:java.class.path=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\test-classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1-sources.jar;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1.jar;D:\Download\apache-maven-2.2.1\repository\junit\junit\3.8.1\junit-3.8.1.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-aop\4.0.0.RELEASE\spring-aop-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-beans\4.0.0.RELEASE\spring-beans-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-context\4.0.0.RELEASE\spring-context-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-expression\4.0.0.RELEASE\spring-expression-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-core\4.0.0.RELEASE\spring-core-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\Download\apache-maven-2.2.1\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\Download\apache-maven-2.2.1\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\Download\apache-maven-2.2.1\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:java.library.path=C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\Program Files (x86)\WANdisco\Subversion;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.6.0_45/bin;C:\Program Files (x86)\Java\jdk1.6.0_45/jre/bin;D:\apache-maven-2.2.1/bin;D:\Program Files\TortoiseSVN\bin;D:\tomcat-tomcat-7.0.26\bin;D:\jboss-4.2.2.GA\bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;D:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;D:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;d:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;D:\SSH Secure Shell;.
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:java.io.tmpdir=C:\Users\HUANGS~1.HS\AppData\Local\Temp\
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:java.compiler=<NA>
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:os.name=Windows 7
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:os.arch=x86
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:os.version=6.1
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:user.name=huangsheng.hs
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:user.home=C:\Users\huangsheng.hs
+056 15,2014 09:56:41 上午 : INFO [main] Client environment:user.dir=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC
+056 15,2014 09:56:41 上午 : INFO [main] Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=10000 watcher=null
+056 15,2014 09:56:41 上午 : INFO [main-SendThread(127.0.0.1:2181)] Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+056 15,2014 09:56:41 上午 : INFO [main-SendThread(127.0.0.1:2181)] Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+056 15,2014 09:56:41 上午 : INFO [main-SendThread(127.0.0.1:2181)] Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x145631898c30001, negotiated timeout = 10000
+056 15,2014 09:56:41 上午 : ERROR [main-EventThread] Error while calling watcher 
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+056 15,2014 09:56:41 上午 : INFO [main] Session: 0x145631898c30001 closed
+056 15,2014 09:56:41 上午 : INFO [main-EventThread] EventThread shut down
+057 15,2014 09:57:51 上午 : INFO [main] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@15e4ae5: startup date [Tue Apr 15 09:57:51 CST 2014]; root of context hierarchy
+057 15,2014 09:57:51 上午 : INFO [main] Loading XML bean definitions from class path resource [consumer.xml]
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:host.name=MININT-0NIHNS8.taobao.ali.com
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:java.version=1.7.0_17
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:java.vendor=Oracle Corporation
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:java.home=C:\Program Files (x86)\Java\jre7
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:java.class.path=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\test-classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1-sources.jar;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1.jar;D:\Download\apache-maven-2.2.1\repository\junit\junit\3.8.1\junit-3.8.1.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-aop\4.0.0.RELEASE\spring-aop-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-beans\4.0.0.RELEASE\spring-beans-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-context\4.0.0.RELEASE\spring-context-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-expression\4.0.0.RELEASE\spring-expression-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-core\4.0.0.RELEASE\spring-core-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\Download\apache-maven-2.2.1\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\Download\apache-maven-2.2.1\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\Download\apache-maven-2.2.1\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:java.library.path=C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\Program Files (x86)\WANdisco\Subversion;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.6.0_45/bin;C:\Program Files (x86)\Java\jdk1.6.0_45/jre/bin;D:\apache-maven-2.2.1/bin;D:\Program Files\TortoiseSVN\bin;D:\tomcat-tomcat-7.0.26\bin;D:\jboss-4.2.2.GA\bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;D:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;D:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;d:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;D:\SSH Secure Shell;.
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:java.io.tmpdir=C:\Users\HUANGS~1.HS\AppData\Local\Temp\
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:java.compiler=<NA>
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:os.name=Windows 7
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:os.arch=x86
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:os.version=6.1
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:user.name=huangsheng.hs
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:user.home=C:\Users\huangsheng.hs
+057 15,2014 09:57:52 上午 : INFO [main] Client environment:user.dir=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC
+057 15,2014 09:57:52 上午 : INFO [main] Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=10000 watcher=null
+057 15,2014 09:57:52 上午 : INFO [main-SendThread(127.0.0.1:2181)] Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+057 15,2014 09:57:52 上午 : INFO [main-SendThread(127.0.0.1:2181)] Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+057 15,2014 09:57:52 上午 : INFO [main-SendThread(127.0.0.1:2181)] Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x145631898c30002, negotiated timeout = 10000
+057 15,2014 09:57:52 上午 : ERROR [main-EventThread] Error while calling watcher 
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+057 15,2014 09:57:52 上午 : INFO [main] Session: 0x145631898c30002 closed
+057 15,2014 09:57:52 上午 : INFO [main-EventThread] EventThread shut down
+058 15,2014 09:58:39 上午 : INFO [main] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@15e4ae5: startup date [Tue Apr 15 09:58:39 CST 2014]; root of context hierarchy
+058 15,2014 09:58:39 上午 : INFO [main] Loading XML bean definitions from class path resource [consumer.xml]
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:host.name=MININT-0NIHNS8.taobao.ali.com
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:java.version=1.7.0_17
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:java.vendor=Oracle Corporation
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:java.home=C:\Program Files (x86)\Java\jre7
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:java.class.path=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\test-classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1-sources.jar;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1.jar;D:\Download\apache-maven-2.2.1\repository\junit\junit\3.8.1\junit-3.8.1.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-aop\4.0.0.RELEASE\spring-aop-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-beans\4.0.0.RELEASE\spring-beans-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-context\4.0.0.RELEASE\spring-context-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-expression\4.0.0.RELEASE\spring-expression-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-core\4.0.0.RELEASE\spring-core-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\Download\apache-maven-2.2.1\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\Download\apache-maven-2.2.1\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\Download\apache-maven-2.2.1\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:java.library.path=C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\Program Files (x86)\WANdisco\Subversion;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.6.0_45/bin;C:\Program Files (x86)\Java\jdk1.6.0_45/jre/bin;D:\apache-maven-2.2.1/bin;D:\Program Files\TortoiseSVN\bin;D:\tomcat-tomcat-7.0.26\bin;D:\jboss-4.2.2.GA\bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;D:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;D:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;d:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;D:\SSH Secure Shell;.
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:java.io.tmpdir=C:\Users\HUANGS~1.HS\AppData\Local\Temp\
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:java.compiler=<NA>
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:os.name=Windows 7
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:os.arch=x86
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:os.version=6.1
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:user.name=huangsheng.hs
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:user.home=C:\Users\huangsheng.hs
+058 15,2014 09:58:39 上午 : INFO [main] Client environment:user.dir=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC
+058 15,2014 09:58:39 上午 : INFO [main] Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=10000 watcher=null
+058 15,2014 09:58:39 上午 : INFO [main-SendThread(127.0.0.1:2181)] Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+058 15,2014 09:58:39 上午 : INFO [main-SendThread(127.0.0.1:2181)] Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+058 15,2014 09:58:39 上午 : INFO [main-SendThread(127.0.0.1:2181)] Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x145631898c30003, negotiated timeout = 10000
+058 15,2014 09:58:39 上午 : ERROR [main-EventThread] Error while calling watcher 
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+058 15,2014 09:58:39 上午 : INFO [main] Session: 0x145631898c30003 closed
+058 15,2014 09:58:39 上午 : INFO [main-EventThread] EventThread shut down
+000 15,2014 10:00:09 上午 : INFO [main] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@15e4ae5: startup date [Tue Apr 15 10:00:09 CST 2014]; root of context hierarchy
+000 15,2014 10:00:09 上午 : INFO [main] Loading XML bean definitions from class path resource [consumer.xml]
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:host.name=MININT-0NIHNS8.taobao.ali.com
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:java.version=1.7.0_17
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:java.vendor=Oracle Corporation
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:java.home=C:\Program Files (x86)\Java\jre7
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:java.class.path=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\test-classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1-sources.jar;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1.jar;D:\Download\apache-maven-2.2.1\repository\junit\junit\3.8.1\junit-3.8.1.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-aop\4.0.0.RELEASE\spring-aop-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-beans\4.0.0.RELEASE\spring-beans-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-context\4.0.0.RELEASE\spring-context-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-expression\4.0.0.RELEASE\spring-expression-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-core\4.0.0.RELEASE\spring-core-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\Download\apache-maven-2.2.1\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\Download\apache-maven-2.2.1\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\Download\apache-maven-2.2.1\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:java.library.path=C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\Program Files (x86)\WANdisco\Subversion;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.6.0_45/bin;C:\Program Files (x86)\Java\jdk1.6.0_45/jre/bin;D:\apache-maven-2.2.1/bin;D:\Program Files\TortoiseSVN\bin;D:\tomcat-tomcat-7.0.26\bin;D:\jboss-4.2.2.GA\bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;D:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;D:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;d:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;D:\SSH Secure Shell;.
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:java.io.tmpdir=C:\Users\HUANGS~1.HS\AppData\Local\Temp\
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:java.compiler=<NA>
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:os.name=Windows 7
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:os.arch=x86
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:os.version=6.1
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:user.name=huangsheng.hs
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:user.home=C:\Users\huangsheng.hs
+000 15,2014 10:00:09 上午 : INFO [main] Client environment:user.dir=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC
+000 15,2014 10:00:09 上午 : INFO [main] Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=10000 watcher=null
+000 15,2014 10:00:09 上午 : INFO [main-SendThread(127.0.0.1:2181)] Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+000 15,2014 10:00:09 上午 : INFO [main-SendThread(127.0.0.1:2181)] Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+000 15,2014 10:00:09 上午 : INFO [main-SendThread(127.0.0.1:2181)] Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x145631898c30004, negotiated timeout = 10000
+000 15,2014 10:00:09 上午 : ERROR [main-EventThread] Error while calling watcher 
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+000 15,2014 10:00:09 上午 : INFO [main] Session: 0x145631898c30004 closed
+000 15,2014 10:00:09 上午 : INFO [main-EventThread] EventThread shut down
+004 15,2014 10:04:38 上午 : INFO [main] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39859: startup date [Tue Apr 15 10:04:38 CST 2014]; root of context hierarchy
+004 15,2014 10:04:38 上午 : INFO [main] Loading XML bean definitions from class path resource [consumer.xml]
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:host.name=MININT-0NIHNS8.taobao.ali.com
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:java.version=1.7.0_17
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:java.vendor=Oracle Corporation
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:java.home=C:\Program Files (x86)\Java\jre7
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:java.class.path=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\test-classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1-sources.jar;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1.jar;D:\Download\apache-maven-2.2.1\repository\junit\junit\3.8.1\junit-3.8.1.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-aop\4.0.0.RELEASE\spring-aop-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-beans\4.0.0.RELEASE\spring-beans-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-context\4.0.0.RELEASE\spring-context-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-expression\4.0.0.RELEASE\spring-expression-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-core\4.0.0.RELEASE\spring-core-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\Download\apache-maven-2.2.1\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\Download\apache-maven-2.2.1\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\Download\apache-maven-2.2.1\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:java.library.path=C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\Program Files (x86)\WANdisco\Subversion;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.6.0_45/bin;C:\Program Files (x86)\Java\jdk1.6.0_45/jre/bin;D:\apache-maven-2.2.1/bin;D:\Program Files\TortoiseSVN\bin;D:\tomcat-tomcat-7.0.26\bin;D:\jboss-4.2.2.GA\bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;D:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;D:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;d:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;D:\SSH Secure Shell;.
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:java.io.tmpdir=C:\Users\HUANGS~1.HS\AppData\Local\Temp\
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:java.compiler=<NA>
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:os.name=Windows 7
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:os.arch=x86
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:os.version=6.1
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:user.name=huangsheng.hs
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:user.home=C:\Users\huangsheng.hs
+004 15,2014 10:04:38 上午 : INFO [main] Client environment:user.dir=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC
+004 15,2014 10:04:38 上午 : INFO [main] Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=10000 watcher=null
+004 15,2014 10:04:38 上午 : INFO [main-SendThread(127.0.0.1:2181)] Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+004 15,2014 10:04:38 上午 : INFO [main-SendThread(127.0.0.1:2181)] Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+004 15,2014 10:04:38 上午 : INFO [main-SendThread(127.0.0.1:2181)] Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x145631898c30005, negotiated timeout = 10000
+004 15,2014 10:04:38 上午 : ERROR [main-EventThread] Error while calling watcher 
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+004 15,2014 10:04:38 上午 : INFO [main] Session: 0x145631898c30005 closed
+004 15,2014 10:04:39 上午 : INFO [main-EventThread] EventThread shut down
+006 15,2014 10:06:51 上午 : INFO [main] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39859: startup date [Tue Apr 15 10:06:51 CST 2014]; root of context hierarchy
+006 15,2014 10:06:51 上午 : INFO [main] Loading XML bean definitions from class path resource [consumer.xml]
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:host.name=MININT-0NIHNS8.taobao.ali.com
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:java.version=1.7.0_17
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:java.vendor=Oracle Corporation
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:java.home=C:\Program Files (x86)\Java\jre7
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:java.class.path=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\test-classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1-sources.jar;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1.jar;D:\Download\apache-maven-2.2.1\repository\junit\junit\3.8.1\junit-3.8.1.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-aop\4.0.0.RELEASE\spring-aop-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-beans\4.0.0.RELEASE\spring-beans-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-context\4.0.0.RELEASE\spring-context-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-expression\4.0.0.RELEASE\spring-expression-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-core\4.0.0.RELEASE\spring-core-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\Download\apache-maven-2.2.1\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\Download\apache-maven-2.2.1\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\Download\apache-maven-2.2.1\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:java.library.path=C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\Program Files (x86)\WANdisco\Subversion;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.6.0_45/bin;C:\Program Files (x86)\Java\jdk1.6.0_45/jre/bin;D:\apache-maven-2.2.1/bin;D:\Program Files\TortoiseSVN\bin;D:\tomcat-tomcat-7.0.26\bin;D:\jboss-4.2.2.GA\bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;D:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;D:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;d:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;D:\SSH Secure Shell;.
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:java.io.tmpdir=C:\Users\HUANGS~1.HS\AppData\Local\Temp\
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:java.compiler=<NA>
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:os.name=Windows 7
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:os.arch=x86
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:os.version=6.1
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:user.name=huangsheng.hs
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:user.home=C:\Users\huangsheng.hs
+006 15,2014 10:06:51 上午 : INFO [main] Client environment:user.dir=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC
+006 15,2014 10:06:51 上午 : INFO [main] Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=10000 watcher=null
+006 15,2014 10:06:51 上午 : INFO [main-SendThread(127.0.0.1:2181)] Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+006 15,2014 10:06:51 上午 : INFO [main-SendThread(127.0.0.1:2181)] Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+006 15,2014 10:06:51 上午 : INFO [main-SendThread(127.0.0.1:2181)] Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x145631898c30006, negotiated timeout = 10000
+006 15,2014 10:06:51 上午 : ERROR [main-EventThread] Error while calling watcher 
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+006 15,2014 10:06:51 上午 : INFO [main] Session: 0x145631898c30006 closed
+006 15,2014 10:06:51 上午 : INFO [main-EventThread] EventThread shut down
+012 15,2014 10:12:36 上午 : INFO [main] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39859: startup date [Tue Apr 15 10:12:36 CST 2014]; root of context hierarchy
+012 15,2014 10:12:37 上午 : INFO [main] Loading XML bean definitions from class path resource [consumer.xml]
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:host.name=MININT-0NIHNS8.taobao.ali.com
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:java.version=1.7.0_17
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:java.vendor=Oracle Corporation
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:java.home=C:\Program Files (x86)\Java\jre7
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:java.class.path=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\test-classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1-sources.jar;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1.jar;D:\Download\apache-maven-2.2.1\repository\junit\junit\3.8.1\junit-3.8.1.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-aop\4.0.0.RELEASE\spring-aop-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-beans\4.0.0.RELEASE\spring-beans-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-context\4.0.0.RELEASE\spring-context-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-expression\4.0.0.RELEASE\spring-expression-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-core\4.0.0.RELEASE\spring-core-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\Download\apache-maven-2.2.1\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\Download\apache-maven-2.2.1\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\Download\apache-maven-2.2.1\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:java.library.path=C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\Program Files (x86)\WANdisco\Subversion;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.6.0_45/bin;C:\Program Files (x86)\Java\jdk1.6.0_45/jre/bin;D:\apache-maven-2.2.1/bin;D:\Program Files\TortoiseSVN\bin;D:\tomcat-tomcat-7.0.26\bin;D:\jboss-4.2.2.GA\bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;D:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;D:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;d:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;D:\SSH Secure Shell;.
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:java.io.tmpdir=C:\Users\HUANGS~1.HS\AppData\Local\Temp\
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:java.compiler=<NA>
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:os.name=Windows 7
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:os.arch=x86
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:os.version=6.1
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:user.name=huangsheng.hs
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:user.home=C:\Users\huangsheng.hs
+012 15,2014 10:12:37 上午 : INFO [main] Client environment:user.dir=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC
+012 15,2014 10:12:37 上午 : INFO [main] Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=10000 watcher=null
+012 15,2014 10:12:37 上午 : INFO [main-SendThread(127.0.0.1:2181)] Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+012 15,2014 10:12:37 上午 : INFO [main-SendThread(127.0.0.1:2181)] Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+012 15,2014 10:12:37 上午 : INFO [main-SendThread(127.0.0.1:2181)] Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x145631898c30007, negotiated timeout = 10000
+012 15,2014 10:12:37 上午 : ERROR [main-EventThread] Error while calling watcher 
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+012 15,2014 10:12:37 上午 : INFO [main] Session: 0x145631898c30007 closed
+012 15,2014 10:12:37 上午 : INFO [main-EventThread] EventThread shut down
+015 15,2014 10:15:15 上午 : INFO [main] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39859: startup date [Tue Apr 15 10:15:15 CST 2014]; root of context hierarchy
+015 15,2014 10:15:15 上午 : INFO [main] Loading XML bean definitions from class path resource [consumer.xml]
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:host.name=MININT-0NIHNS8.taobao.ali.com
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:java.version=1.7.0_17
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:java.vendor=Oracle Corporation
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:java.home=C:\Program Files (x86)\Java\jre7
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:java.class.path=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\test-classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1-sources.jar;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1.jar;D:\Download\apache-maven-2.2.1\repository\junit\junit\3.8.1\junit-3.8.1.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-aop\4.0.0.RELEASE\spring-aop-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-beans\4.0.0.RELEASE\spring-beans-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-context\4.0.0.RELEASE\spring-context-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-expression\4.0.0.RELEASE\spring-expression-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-core\4.0.0.RELEASE\spring-core-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\Download\apache-maven-2.2.1\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\Download\apache-maven-2.2.1\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\Download\apache-maven-2.2.1\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:java.library.path=C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\Program Files (x86)\WANdisco\Subversion;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.6.0_45/bin;C:\Program Files (x86)\Java\jdk1.6.0_45/jre/bin;D:\apache-maven-2.2.1/bin;D:\Program Files\TortoiseSVN\bin;D:\tomcat-tomcat-7.0.26\bin;D:\jboss-4.2.2.GA\bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;D:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;D:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;d:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;D:\SSH Secure Shell;.
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:java.io.tmpdir=C:\Users\HUANGS~1.HS\AppData\Local\Temp\
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:java.compiler=<NA>
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:os.name=Windows 7
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:os.arch=x86
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:os.version=6.1
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:user.name=huangsheng.hs
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:user.home=C:\Users\huangsheng.hs
+015 15,2014 10:15:16 上午 : INFO [main] Client environment:user.dir=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC
+015 15,2014 10:15:16 上午 : INFO [main] Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=10000 watcher=null
+015 15,2014 10:15:16 上午 : INFO [main-SendThread(127.0.0.1:2181)] Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+015 15,2014 10:15:16 上午 : INFO [main-SendThread(127.0.0.1:2181)] Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+015 15,2014 10:15:16 上午 : INFO [main-SendThread(127.0.0.1:2181)] Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x145631898c30008, negotiated timeout = 10000
+015 15,2014 10:15:16 上午 : ERROR [main-EventThread] Error while calling watcher 
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+015 15,2014 10:15:16 上午 : INFO [main] Session: 0x145631898c30008 closed
+015 15,2014 10:15:16 上午 : INFO [main-EventThread] EventThread shut down
+015 15,2014 10:15:36 上午 : INFO [main] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1b1ab1d: startup date [Tue Apr 15 10:15:36 CST 2014]; root of context hierarchy
+015 15,2014 10:15:36 上午 : INFO [main] Loading XML bean definitions from class path resource [consumer.xml]
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:host.name=MININT-0NIHNS8.taobao.ali.com
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:java.version=1.7.0_17
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:java.vendor=Oracle Corporation
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:java.home=C:\Program Files (x86)\Java\jre7
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:java.class.path=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\test-classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1-sources.jar;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1.jar;D:\Download\apache-maven-2.2.1\repository\junit\junit\3.8.1\junit-3.8.1.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-aop\4.0.0.RELEASE\spring-aop-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-beans\4.0.0.RELEASE\spring-beans-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-context\4.0.0.RELEASE\spring-context-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-expression\4.0.0.RELEASE\spring-expression-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-core\4.0.0.RELEASE\spring-core-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\Download\apache-maven-2.2.1\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\Download\apache-maven-2.2.1\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\Download\apache-maven-2.2.1\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:java.library.path=C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\Program Files (x86)\WANdisco\Subversion;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.6.0_45/bin;C:\Program Files (x86)\Java\jdk1.6.0_45/jre/bin;D:\apache-maven-2.2.1/bin;D:\Program Files\TortoiseSVN\bin;D:\tomcat-tomcat-7.0.26\bin;D:\jboss-4.2.2.GA\bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;D:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;D:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;d:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;D:\SSH Secure Shell;.
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:java.io.tmpdir=C:\Users\HUANGS~1.HS\AppData\Local\Temp\
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:java.compiler=<NA>
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:os.name=Windows 7
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:os.arch=x86
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:os.version=6.1
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:user.name=huangsheng.hs
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:user.home=C:\Users\huangsheng.hs
+015 15,2014 10:15:37 上午 : INFO [main] Client environment:user.dir=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC
+015 15,2014 10:15:37 上午 : INFO [main] Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=10000 watcher=null
+015 15,2014 10:15:37 上午 : INFO [main-SendThread(127.0.0.1:2181)] Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+015 15,2014 10:15:37 上午 : INFO [main-SendThread(127.0.0.1:2181)] Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+015 15,2014 10:15:37 上午 : INFO [main-SendThread(127.0.0.1:2181)] Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x145631898c30009, negotiated timeout = 10000
+015 15,2014 10:15:37 上午 : ERROR [main-EventThread] Error while calling watcher 
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+015 15,2014 10:15:37 上午 : INFO [main] Session: 0x145631898c30009 closed
+015 15,2014 10:15:37 上午 : INFO [main-EventThread] EventThread shut down
+016 15,2014 10:16:48 上午 : INFO [main] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@11e725: startup date [Tue Apr 15 10:16:48 CST 2014]; root of context hierarchy
+016 15,2014 10:16:48 上午 : INFO [main] Loading XML bean definitions from class path resource [consumer.xml]
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:host.name=MININT-0NIHNS8.taobao.ali.com
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:java.version=1.7.0_17
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:java.vendor=Oracle Corporation
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:java.home=C:\Program Files (x86)\Java\jre7
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:java.class.path=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\test-classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1-sources.jar;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1.jar;D:\Download\apache-maven-2.2.1\repository\junit\junit\3.8.1\junit-3.8.1.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-aop\4.0.0.RELEASE\spring-aop-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-beans\4.0.0.RELEASE\spring-beans-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-context\4.0.0.RELEASE\spring-context-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-expression\4.0.0.RELEASE\spring-expression-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-core\4.0.0.RELEASE\spring-core-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\Download\apache-maven-2.2.1\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\Download\apache-maven-2.2.1\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\Download\apache-maven-2.2.1\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:java.library.path=C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\Program Files (x86)\WANdisco\Subversion;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.6.0_45/bin;C:\Program Files (x86)\Java\jdk1.6.0_45/jre/bin;D:\apache-maven-2.2.1/bin;D:\Program Files\TortoiseSVN\bin;D:\tomcat-tomcat-7.0.26\bin;D:\jboss-4.2.2.GA\bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;D:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;D:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;d:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;D:\SSH Secure Shell;.
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:java.io.tmpdir=C:\Users\HUANGS~1.HS\AppData\Local\Temp\
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:java.compiler=<NA>
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:os.name=Windows 7
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:os.arch=x86
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:os.version=6.1
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:user.name=huangsheng.hs
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:user.home=C:\Users\huangsheng.hs
+016 15,2014 10:16:49 上午 : INFO [main] Client environment:user.dir=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC
+016 15,2014 10:16:49 上午 : INFO [main] Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=10000 watcher=null
+016 15,2014 10:16:49 上午 : INFO [main-SendThread(127.0.0.1:2181)] Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+016 15,2014 10:16:49 上午 : INFO [main-SendThread(127.0.0.1:2181)] Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+016 15,2014 10:16:49 上午 : INFO [main-SendThread(127.0.0.1:2181)] Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x145631898c3000a, negotiated timeout = 10000
+016 15,2014 10:16:49 上午 : ERROR [main-EventThread] Error while calling watcher 
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+016 15,2014 10:16:49 上午 : INFO [main] Session: 0x145631898c3000a closed
+016 15,2014 10:16:49 上午 : INFO [main-EventThread] EventThread shut down
+021 15,2014 10:21:25 上午 : INFO [main] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@11e725: startup date [Tue Apr 15 10:21:25 CST 2014]; root of context hierarchy
+021 15,2014 10:21:25 上午 : INFO [main] Loading XML bean definitions from class path resource [consumer.xml]
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:host.name=MININT-0NIHNS8.taobao.ali.com
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:java.version=1.7.0_17
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:java.vendor=Oracle Corporation
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:java.home=C:\Program Files (x86)\Java\jre7
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:java.class.path=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\test-classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\target\classes;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1-sources.jar;C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC\netty-all-5.0.0.Alpha1.jar;D:\Download\apache-maven-2.2.1\repository\junit\junit\3.8.1\junit-3.8.1.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-aop\4.0.0.RELEASE\spring-aop-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-beans\4.0.0.RELEASE\spring-beans-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-context\4.0.0.RELEASE\spring-context-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-expression\4.0.0.RELEASE\spring-expression-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\org\springframework\spring-core\4.0.0.RELEASE\spring-core-4.0.0.RELEASE.jar;D:\Download\apache-maven-2.2.1\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\Download\apache-maven-2.2.1\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\Download\apache-maven-2.2.1\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\Download\apache-maven-2.2.1\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\Download\apache-maven-2.2.1\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:java.library.path=C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\Program Files (x86)\WANdisco\Subversion;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.6.0_45/bin;C:\Program Files (x86)\Java\jdk1.6.0_45/jre/bin;D:\apache-maven-2.2.1/bin;D:\Program Files\TortoiseSVN\bin;D:\tomcat-tomcat-7.0.26\bin;D:\jboss-4.2.2.GA\bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;D:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;D:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;D:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;d:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;D:\SSH Secure Shell;.
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:java.io.tmpdir=C:\Users\HUANGS~1.HS\AppData\Local\Temp\
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:java.compiler=<NA>
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:os.name=Windows 7
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:os.arch=x86
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:os.version=6.1
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:user.name=huangsheng.hs
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:user.home=C:\Users\huangsheng.hs
+021 15,2014 10:21:25 上午 : INFO [main] Client environment:user.dir=C:\Users\huangsheng.hs\Documents\GitHub\JavaRPC\JavaRPC
+021 15,2014 10:21:25 上午 : INFO [main] Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=10000 watcher=null
+021 15,2014 10:21:25 上午 : INFO [main-SendThread(127.0.0.1:2181)] Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+021 15,2014 10:21:25 上午 : INFO [main-SendThread(127.0.0.1:2181)] Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+021 15,2014 10:21:25 上午 : INFO [main-SendThread(127.0.0.1:2181)] Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x145631898c3000b, negotiated timeout = 10000
+021 15,2014 10:21:25 上午 : ERROR [main-EventThread] Error while calling watcher 
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+021 15,2014 10:21:25 上午 : INFO [main] Session: 0x145631898c3000b closed
+021 15,2014 10:21:25 上午 : INFO [main-EventThread] EventThread shut down

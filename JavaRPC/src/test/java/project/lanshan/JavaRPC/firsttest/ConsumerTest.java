@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class ConsumerTest {
 	public static void main(String[] args){
 		ApplicationContext acxt = new ClassPathXmlApplicationContext("consumer.xml");
-		Action action = (ConsumerAction)acxt.getBean("CService");
+		Action action = (Action)acxt.getBean("CService");
 		System.out.println(action.getWords());
 	}
 }
